@@ -1,4 +1,4 @@
-import {MockERC20Instance} from '../build/types/truffle-types'
+import { MockERC20Instance } from '../build/types/truffle-types'
 import BigNumber from 'bignumber.js'
 
 const util = require('@0x/protocol-utils')
