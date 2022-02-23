@@ -1,0 +1,975 @@
+{
+  "address": "0x69252109Ab2A7cC3e2B91d57359E6ebCb56f08f8",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newDisputer",
+          "type": "address"
+        }
+      ],
+      "name": "DisputerUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "expiryTimestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "disputedPrice",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newPrice",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "disputeTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "ExpiryPriceDisputed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "expiryTimestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "onchainTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "ExpiryPriceUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "pricer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "disputePeriod",
+          "type": "uint256"
+        }
+      ],
+      "name": "PricerDisputePeriodUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "pricer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "lockingPeriod",
+          "type": "uint256"
+        }
+      ],
+      "name": "PricerLockingPeriodUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "pricer",
+          "type": "address"
+        }
+      ],
+      "name": "PricerUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        }
+      ],
+      "name": "StablePriceUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_expiryTimestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "name": "disputeExpiryPrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "endMigration",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint80",
+          "name": "_roundId",
+          "type": "uint80"
+        }
+      ],
+      "name": "getChainlinkRoundData",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getDisputer",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_expiryTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "getExpiryPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        }
+      ],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        }
+      ],
+      "name": "getPricer",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_pricer",
+          "type": "address"
+        }
+      ],
+      "name": "getPricerDisputePeriod",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_pricer",
+          "type": "address"
+        }
+      ],
+      "name": "getPricerLockingPeriod",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_expiryTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "isDisputePeriodOver",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_expiryTimestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "isLockingPeriodOver",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_expiries",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_prices",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "migrateOracle",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_pricer",
+          "type": "address"
+        }
+      ],
+      "name": "setAssetPricer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_pricer",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_disputePeriod",
+          "type": "uint256"
+        }
+      ],
+      "name": "setDisputePeriod",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_disputer",
+          "type": "address"
+        }
+      ],
+      "name": "setDisputer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_expiryTimestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "name": "setExpiryPrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_pricer",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_lockingPeriod",
+          "type": "uint256"
+        }
+      ],
+      "name": "setLockingPeriod",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "name": "setStablePrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x31bf7b4b5a6062e9a6e8752a233f08d3840bc150b47affd9337c62e6687d24bb",
+  "receipt": {
+    "to": null,
+    "from": "0x3F57a38577F92adC561D8f4504832dCc34000f11",
+    "contractAddress": "0x69252109Ab2A7cC3e2B91d57359E6ebCb56f08f8",
+    "transactionIndex": 11,
+    "gasUsed": "1331188",
+    "logsBloom": "0x00000000000000000000000000000000000000000000100000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000020000000000000080000800000000000000000000000000000000400000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002200000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000040000000",
+    "blockHash": "0x7329bab6a33083b2013e3985c673758a87314f533a900dae519f4627ca64621a",
+    "transactionHash": "0x31bf7b4b5a6062e9a6e8752a233f08d3840bc150b47affd9337c62e6687d24bb",
+    "logs": [
+      {
+        "transactionIndex": 11,
+        "blockNumber": 29998397,
+        "transactionHash": "0x31bf7b4b5a6062e9a6e8752a233f08d3840bc150b47affd9337c62e6687d24bb",
+        "address": "0x69252109Ab2A7cC3e2B91d57359E6ebCb56f08f8",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000003f57a38577f92adc561d8f4504832dcc34000f11"
+        ],
+        "data": "0x",
+        "logIndex": 34,
+        "blockHash": "0x7329bab6a33083b2013e3985c673758a87314f533a900dae519f4627ca64621a"
+      }
+    ],
+    "blockNumber": 29998397,
+    "cumulativeGasUsed": "2588111",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "e64f7796e753573a0d4471a5ea61f62d",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newDisputer\",\"type\":\"address\"}],\"name\":\"DisputerUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"asset\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"expiryTimestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"disputedPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"newPrice\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"disputeTimestamp\",\"type\":\"uint256\"}],\"name\":\"ExpiryPriceDisputed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"asset\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"expiryTimestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"onchainTimestamp\",\"type\":\"uint256\"}],\"name\":\"ExpiryPriceUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"pricer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"disputePeriod\",\"type\":\"uint256\"}],\"name\":\"PricerDisputePeriodUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"pricer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"lockingPeriod\",\"type\":\"uint256\"}],\"name\":\"PricerLockingPeriodUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"asset\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"pricer\",\"type\":\"address\"}],\"name\":\"PricerUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"asset\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"StablePriceUpdated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_expiryTimestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"}],\"name\":\"disputeExpiryPrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"endMigration\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"uint80\",\"name\":\"_roundId\",\"type\":\"uint80\"}],\"name\":\"getChainlinkRoundData\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDisputer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_expiryTimestamp\",\"type\":\"uint256\"}],\"name\":\"getExpiryPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"}],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"}],\"name\":\"getPricer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pricer\",\"type\":\"address\"}],\"name\":\"getPricerDisputePeriod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pricer\",\"type\":\"address\"}],\"name\":\"getPricerLockingPeriod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_expiryTimestamp\",\"type\":\"uint256\"}],\"name\":\"isDisputePeriodOver\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_expiryTimestamp\",\"type\":\"uint256\"}],\"name\":\"isLockingPeriodOver\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"uint256[]\",\"name\":\"_expiries\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_prices\",\"type\":\"uint256[]\"}],\"name\":\"migrateOracle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_pricer\",\"type\":\"address\"}],\"name\":\"setAssetPricer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pricer\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_disputePeriod\",\"type\":\"uint256\"}],\"name\":\"setDisputePeriod\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_disputer\",\"type\":\"address\"}],\"name\":\"setDisputer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_expiryTimestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"}],\"name\":\"setExpiryPrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pricer\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_lockingPeriod\",\"type\":\"uint256\"}],\"name\":\"setLockingPeriod\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"}],\"name\":\"setStablePrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Opyn Team\",\"methods\":{\"disputeExpiryPrice(address,uint256,uint256)\":{\"details\":\"only the disputer can dispute a price during the dispute period, by setting a new one\",\"params\":{\"_asset\":\"asset address\",\"_expiryTimestamp\":\"expiry timestamp\",\"_price\":\"the correct price\"}},\"endMigration()\":{\"details\":\"can only be called by owner, should be called before setting Oracle module into AddressBook\"},\"getChainlinkRoundData(address,uint80)\":{\"details\":\"if asset is a stable asset, will return stored price and timestamp equal to now\",\"params\":{\"_asset\":\"asset address to get it's historical price\",\"_roundId\":\"chainlink round id\"},\"returns\":{\"_0\":\"price and round timestamp\"}},\"getDisputer()\":{\"returns\":{\"_0\":\"disputer address\"}},\"getExpiryPrice(address,uint256)\":{\"params\":{\"_asset\":\"asset address\",\"_expiryTimestamp\":\"expiry timestamp\"},\"returns\":{\"_0\":\"price scaled by 1e8, denominated in USD\",\"_1\":\"isFinalized True, if the price is finalized, False if not\"}},\"getPrice(address)\":{\"params\":{\"_asset\":\"asset address\"},\"returns\":{\"_0\":\"price scaled by 1e8, denominated in USD e.g. 17568900000 => 175.689 USD\"}},\"getPricer(address)\":{\"params\":{\"_asset\":\"asset address\"},\"returns\":{\"_0\":\"pricer address\"}},\"getPricerDisputePeriod(address)\":{\"details\":\"during the dispute period, the disputer can dispute the submitted price and modify it\",\"params\":{\"_pricer\":\"pricer address\"},\"returns\":{\"_0\":\"dispute period\"}},\"getPricerLockingPeriod(address)\":{\"details\":\"during the locking period an expiry price can not be submitted to this contract\",\"params\":{\"_pricer\":\"pricer address\"},\"returns\":{\"_0\":\"locking period\"}},\"isDisputePeriodOver(address,uint256)\":{\"params\":{\"_asset\":\"asset address\",\"_expiryTimestamp\":\"expiry timestamp\"},\"returns\":{\"_0\":\"True if dispute period is over, False if not\"}},\"isLockingPeriodOver(address,uint256)\":{\"params\":{\"_asset\":\"asset address\",\"_expiryTimestamp\":\"expiry timestamp\"},\"returns\":{\"_0\":\"True if locking period is over, False if not\"}},\"migrateOracle(address,uint256[],uint256[])\":{\"details\":\"this can only be called by owner, should be used at the deployment time before setting Oracle module into AddressBook\",\"params\":{\"_asset\":\"asset address\",\"_expiries\":\"array of expiries timestamps\",\"_prices\":\"array of prices\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setAssetPricer(address,address)\":{\"details\":\"can only be called by the owner\",\"params\":{\"_asset\":\"asset address\",\"_pricer\":\"pricer address\"}},\"setDisputePeriod(address,uint256)\":{\"details\":\"can only be called by the owner for a composite pricer (ie CompoundPricer) that depends on or calls other pricers, ensure that the dispute period for the composite pricer is longer than the dispute period for the asset pricer that it calls to ensure safe usage as a dispute in the other pricer will cause the need for a dispute with the composite pricer's price\",\"params\":{\"_disputePeriod\":\"dispute period\",\"_pricer\":\"pricer address\"}},\"setDisputer(address)\":{\"details\":\"can only be called by the owner\",\"params\":{\"_disputer\":\"disputer address\"}},\"setExpiryPrice(address,uint256,uint256)\":{\"details\":\"asset price can only be set after the locking period is over and before the dispute period has started\",\"params\":{\"_asset\":\"asset address\",\"_expiryTimestamp\":\"expiry timestamp\",\"_price\":\"asset price at expiry\"}},\"setLockingPeriod(address,uint256)\":{\"details\":\"can only be called by the owner\",\"params\":{\"_lockingPeriod\":\"locking period\",\"_pricer\":\"pricer address\"}},\"setStablePrice(address,uint256)\":{\"details\":\"price should be scaled by 1e8\",\"params\":{\"_asset\":\"asset address\",\"_price\":\"price\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"stateVariables\":{\"assetPricer\":{\"details\":\"mapping between an asset and its pricer\"},\"disputer\":{\"details\":\"disputer is a role defined by the owner that has the ability to dispute a price during the dispute period\"},\"pricerDisputePeriod\":{\"details\":\"mapping of asset pricer to its dispute period dispute period is the period of time after an expiry price has been pushed where a price can be disputed\"},\"pricerLockingPeriod\":{\"details\":\"mapping of asset pricer to its locking period locking period is the period of time after the expiry timestamp where a price can not be pushed\"},\"stablePrice\":{\"details\":\"mapping between stable asset and price\"},\"storedPrice\":{\"details\":\"mapping between asset, expiry timestamp, and the Price structure at the expiry timestamp\"}},\"title\":\"Oracle Module\"},\"userdoc\":{\"methods\":{\"disputeExpiryPrice(address,uint256,uint256)\":{\"notice\":\"dispute an asset price during the dispute period\"},\"endMigration()\":{\"notice\":\"end migration process\"},\"getChainlinkRoundData(address,uint80)\":{\"notice\":\"get historical asset price and timestamp\"},\"getDisputer()\":{\"notice\":\"get the disputer address\"},\"getExpiryPrice(address,uint256)\":{\"notice\":\"get the asset price at specific expiry timestamp\"},\"getPrice(address)\":{\"notice\":\"get a live asset price from the asset's pricer contract\"},\"getPricer(address)\":{\"notice\":\"get the pricer for an asset\"},\"getPricerDisputePeriod(address)\":{\"notice\":\"get a pricer's dispute period dispute period is the period of time after an expiry price has been pushed where a price can be disputed\"},\"getPricerLockingPeriod(address)\":{\"notice\":\"get a pricer's locking period locking period is the period of time after the expiry timestamp where a price can not be pushed\"},\"isDisputePeriodOver(address,uint256)\":{\"notice\":\"check if the dispute period is over\"},\"isLockingPeriodOver(address,uint256)\":{\"notice\":\"check if the locking period is over for setting the asset price at a particular expiry timestamp\"},\"migrateOracle(address,uint256[],uint256[])\":{\"notice\":\"function to migrate asset prices from old oracle to new deployed oracle\"},\"setAssetPricer(address,address)\":{\"notice\":\"sets the pricer for an asset\"},\"setDisputePeriod(address,uint256)\":{\"notice\":\"sets the dispute period for a pricer\"},\"setDisputer(address)\":{\"notice\":\"set the disputer address\"},\"setExpiryPrice(address,uint256,uint256)\":{\"notice\":\"submits the expiry price to the oracle, can only be set from the pricer\"},\"setLockingPeriod(address,uint256)\":{\"notice\":\"sets the locking period for a pricer\"},\"setStablePrice(address,uint256)\":{\"notice\":\"set stable asset price\"}},\"notice\":\"The Oracle module sets, retrieves, and stores USD prices (USD per asset) for underlying, collateral, and strike assets manages pricers that are used for different assets\"}},\"settings\":{\"compilationTarget\":{\"contracts/core/Oracle.sol\":\"Oracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/core/Oracle.sol\":{\"content\":\"/**\\n * SPDX-License-Identifier: UNLICENSED\\n */\\npragma solidity =0.6.10;\\n\\nimport {OpynPricerInterface} from \\\"../interfaces/OpynPricerInterface.sol\\\";\\nimport {Ownable} from \\\"../packages/oz/Ownable.sol\\\";\\nimport {SafeMath} from \\\"../packages/oz/SafeMath.sol\\\";\\n\\n/**\\n * @author Opyn Team\\n * @title Oracle Module\\n * @notice The Oracle module sets, retrieves, and stores USD prices (USD per asset) for underlying, collateral, and strike assets\\n * manages pricers that are used for different assets\\n */\\ncontract Oracle is Ownable {\\n    using SafeMath for uint256;\\n\\n    /// @dev structure that stores price of asset and timestamp when the price was stored\\n    struct Price {\\n        uint256 price;\\n        uint256 timestamp; // timestamp at which the price is pushed to this oracle\\n    }\\n\\n    //// @dev disputer is a role defined by the owner that has the ability to dispute a price during the dispute period\\n    address internal disputer;\\n\\n    bool migrated;\\n\\n    /// @dev mapping of asset pricer to its locking period\\n    /// locking period is the period of time after the expiry timestamp where a price can not be pushed\\n    mapping(address => uint256) internal pricerLockingPeriod;\\n    /// @dev mapping of asset pricer to its dispute period\\n    /// dispute period is the period of time after an expiry price has been pushed where a price can be disputed\\n    mapping(address => uint256) internal pricerDisputePeriod;\\n    /// @dev mapping between an asset and its pricer\\n    mapping(address => address) internal assetPricer;\\n    /// @dev mapping between asset, expiry timestamp, and the Price structure at the expiry timestamp\\n    mapping(address => mapping(uint256 => Price)) internal storedPrice;\\n    /// @dev mapping between stable asset and price\\n    mapping(address => uint256) internal stablePrice;\\n\\n    /// @notice emits an event when the disputer is updated\\n    event DisputerUpdated(address indexed newDisputer);\\n    /// @notice emits an event when the pricer is updated for an asset\\n    event PricerUpdated(address indexed asset, address indexed pricer);\\n    /// @notice emits an event when the locking period is updated for a pricer\\n    event PricerLockingPeriodUpdated(address indexed pricer, uint256 lockingPeriod);\\n    /// @notice emits an event when the dispute period is updated for a pricer\\n    event PricerDisputePeriodUpdated(address indexed pricer, uint256 disputePeriod);\\n    /// @notice emits an event when an expiry price is updated for a specific asset\\n    event ExpiryPriceUpdated(\\n        address indexed asset,\\n        uint256 indexed expiryTimestamp,\\n        uint256 price,\\n        uint256 onchainTimestamp\\n    );\\n    /// @notice emits an event when the disputer disputes a price during the dispute period\\n    event ExpiryPriceDisputed(\\n        address indexed asset,\\n        uint256 indexed expiryTimestamp,\\n        uint256 disputedPrice,\\n        uint256 newPrice,\\n        uint256 disputeTimestamp\\n    );\\n    /// @notice emits an event when a stable asset price changes\\n    event StablePriceUpdated(address indexed asset, uint256 price);\\n\\n    /**\\n     * @notice function to migrate asset prices from old oracle to new deployed oracle\\n     * @dev this can only be called by owner, should be used at the deployment time before setting Oracle module into AddressBook\\n     * @param _asset asset address\\n     * @param _expiries array of expiries timestamps\\n     * @param _prices array of prices\\n     */\\n    function migrateOracle(\\n        address _asset,\\n        uint256[] calldata _expiries,\\n        uint256[] calldata _prices\\n    ) external onlyOwner {\\n        require(!migrated, \\\"Oracle: migration already done\\\");\\n        require(_expiries.length == _prices.length, \\\"Oracle: invalid migration data\\\");\\n\\n        for (uint256 i; i < _expiries.length; i++) {\\n            storedPrice[_asset][_expiries[i]] = Price(_prices[i], now);\\n        }\\n    }\\n\\n    /**\\n     * @notice end migration process\\n     * @dev can only be called by owner, should be called before setting Oracle module into AddressBook\\n     */\\n    function endMigration() external onlyOwner {\\n        migrated = true;\\n    }\\n\\n    /**\\n     * @notice sets the pricer for an asset\\n     * @dev can only be called by the owner\\n     * @param _asset asset address\\n     * @param _pricer pricer address\\n     */\\n    function setAssetPricer(address _asset, address _pricer) external onlyOwner {\\n        require(_pricer != address(0), \\\"Oracle: cannot set pricer to address(0)\\\");\\n        require(stablePrice[_asset] == 0, \\\"Oracle: could not set a pricer for stable asset\\\");\\n\\n        assetPricer[_asset] = _pricer;\\n\\n        emit PricerUpdated(_asset, _pricer);\\n    }\\n\\n    /**\\n     * @notice sets the locking period for a pricer\\n     * @dev can only be called by the owner\\n     * @param _pricer pricer address\\n     * @param _lockingPeriod locking period\\n     */\\n    function setLockingPeriod(address _pricer, uint256 _lockingPeriod) external onlyOwner {\\n        pricerLockingPeriod[_pricer] = _lockingPeriod;\\n\\n        emit PricerLockingPeriodUpdated(_pricer, _lockingPeriod);\\n    }\\n\\n    /**\\n     * @notice sets the dispute period for a pricer\\n     * @dev can only be called by the owner\\n     * for a composite pricer (ie CompoundPricer) that depends on or calls other pricers, ensure\\n     * that the dispute period for the composite pricer is longer than the dispute period for the\\n     * asset pricer that it calls to ensure safe usage as a dispute in the other pricer will cause\\n     * the need for a dispute with the composite pricer's price\\n     * @param _pricer pricer address\\n     * @param _disputePeriod dispute period\\n     */\\n    function setDisputePeriod(address _pricer, uint256 _disputePeriod) external onlyOwner {\\n        pricerDisputePeriod[_pricer] = _disputePeriod;\\n\\n        emit PricerDisputePeriodUpdated(_pricer, _disputePeriod);\\n    }\\n\\n    /**\\n     * @notice set the disputer address\\n     * @dev can only be called by the owner\\n     * @param _disputer disputer address\\n     */\\n    function setDisputer(address _disputer) external onlyOwner {\\n        disputer = _disputer;\\n\\n        emit DisputerUpdated(_disputer);\\n    }\\n\\n    /**\\n     * @notice set stable asset price\\n     * @dev price should be scaled by 1e8\\n     * @param _asset asset address\\n     * @param _price price\\n     */\\n    function setStablePrice(address _asset, uint256 _price) external onlyOwner {\\n        require(assetPricer[_asset] == address(0), \\\"Oracle: could not set stable price for an asset with pricer\\\");\\n\\n        stablePrice[_asset] = _price;\\n\\n        emit StablePriceUpdated(_asset, _price);\\n    }\\n\\n    /**\\n     * @notice dispute an asset price during the dispute period\\n     * @dev only the disputer can dispute a price during the dispute period, by setting a new one\\n     * @param _asset asset address\\n     * @param _expiryTimestamp expiry timestamp\\n     * @param _price the correct price\\n     */\\n    function disputeExpiryPrice(\\n        address _asset,\\n        uint256 _expiryTimestamp,\\n        uint256 _price\\n    ) external {\\n        require(msg.sender == disputer, \\\"Oracle: caller is not the disputer\\\");\\n        require(!isDisputePeriodOver(_asset, _expiryTimestamp), \\\"Oracle: dispute period over\\\");\\n\\n        Price storage priceToUpdate = storedPrice[_asset][_expiryTimestamp];\\n\\n        require(priceToUpdate.timestamp != 0, \\\"Oracle: price to dispute does not exist\\\");\\n\\n        uint256 oldPrice = priceToUpdate.price;\\n        priceToUpdate.price = _price;\\n\\n        emit ExpiryPriceDisputed(_asset, _expiryTimestamp, oldPrice, _price, now);\\n    }\\n\\n    /**\\n     * @notice submits the expiry price to the oracle, can only be set from the pricer\\n     * @dev asset price can only be set after the locking period is over and before the dispute period has started\\n     * @param _asset asset address\\n     * @param _expiryTimestamp expiry timestamp\\n     * @param _price asset price at expiry\\n     */\\n    function setExpiryPrice(\\n        address _asset,\\n        uint256 _expiryTimestamp,\\n        uint256 _price\\n    ) external {\\n        require(msg.sender == assetPricer[_asset], \\\"Oracle: caller is not authorized to set expiry price\\\");\\n        require(isLockingPeriodOver(_asset, _expiryTimestamp), \\\"Oracle: locking period is not over yet\\\");\\n        require(storedPrice[_asset][_expiryTimestamp].timestamp == 0, \\\"Oracle: dispute period started\\\");\\n\\n        storedPrice[_asset][_expiryTimestamp] = Price(_price, now);\\n        emit ExpiryPriceUpdated(_asset, _expiryTimestamp, _price, now);\\n    }\\n\\n    /**\\n     * @notice get a live asset price from the asset's pricer contract\\n     * @param _asset asset address\\n     * @return price scaled by 1e8, denominated in USD\\n     * e.g. 17568900000 => 175.689 USD\\n     */\\n    function getPrice(address _asset) external view returns (uint256) {\\n        uint256 price = stablePrice[_asset];\\n\\n        if (price == 0) {\\n            require(assetPricer[_asset] != address(0), \\\"Oracle: Pricer for this asset not set\\\");\\n\\n            price = OpynPricerInterface(assetPricer[_asset]).getPrice();\\n        }\\n\\n        return price;\\n    }\\n\\n    /**\\n     * @notice get the asset price at specific expiry timestamp\\n     * @param _asset asset address\\n     * @param _expiryTimestamp expiry timestamp\\n     * @return price scaled by 1e8, denominated in USD\\n     * @return isFinalized True, if the price is finalized, False if not\\n     */\\n    function getExpiryPrice(address _asset, uint256 _expiryTimestamp) external view returns (uint256, bool) {\\n        uint256 price = stablePrice[_asset];\\n        bool isFinalized = true;\\n\\n        if (price == 0) {\\n            price = storedPrice[_asset][_expiryTimestamp].price;\\n            isFinalized = isDisputePeriodOver(_asset, _expiryTimestamp);\\n        }\\n\\n        return (price, isFinalized);\\n    }\\n\\n    /**\\n     * @notice get the pricer for an asset\\n     * @param _asset asset address\\n     * @return pricer address\\n     */\\n    function getPricer(address _asset) external view returns (address) {\\n        return assetPricer[_asset];\\n    }\\n\\n    /**\\n     * @notice get the disputer address\\n     * @return disputer address\\n     */\\n    function getDisputer() external view returns (address) {\\n        return disputer;\\n    }\\n\\n    /**\\n     * @notice get a pricer's locking period\\n     * locking period is the period of time after the expiry timestamp where a price can not be pushed\\n     * @dev during the locking period an expiry price can not be submitted to this contract\\n     * @param _pricer pricer address\\n     * @return locking period\\n     */\\n    function getPricerLockingPeriod(address _pricer) external view returns (uint256) {\\n        return pricerLockingPeriod[_pricer];\\n    }\\n\\n    /**\\n     * @notice get a pricer's dispute period\\n     * dispute period is the period of time after an expiry price has been pushed where a price can be disputed\\n     * @dev during the dispute period, the disputer can dispute the submitted price and modify it\\n     * @param _pricer pricer address\\n     * @return dispute period\\n     */\\n    function getPricerDisputePeriod(address _pricer) external view returns (uint256) {\\n        return pricerDisputePeriod[_pricer];\\n    }\\n\\n    /**\\n     * @notice get historical asset price and timestamp\\n     * @dev if asset is a stable asset, will return stored price and timestamp equal to now\\n     * @param _asset asset address to get it's historical price\\n     * @param _roundId chainlink round id\\n     * @return price and round timestamp\\n     */\\n    function getChainlinkRoundData(address _asset, uint80 _roundId) external view returns (uint256, uint256) {\\n        uint256 price = stablePrice[_asset];\\n        uint256 timestamp = now;\\n\\n        if (price == 0) {\\n            require(assetPricer[_asset] != address(0), \\\"Oracle: Pricer for this asset not set\\\");\\n\\n            (price, timestamp) = OpynPricerInterface(assetPricer[_asset]).getHistoricalPrice(_roundId);\\n        }\\n\\n        return (price, timestamp);\\n    }\\n\\n    /**\\n     * @notice check if the locking period is over for setting the asset price at a particular expiry timestamp\\n     * @param _asset asset address\\n     * @param _expiryTimestamp expiry timestamp\\n     * @return True if locking period is over, False if not\\n     */\\n    function isLockingPeriodOver(address _asset, uint256 _expiryTimestamp) public view returns (bool) {\\n        uint256 price = stablePrice[_asset];\\n\\n        if (price == 0) {\\n            address pricer = assetPricer[_asset];\\n            uint256 lockingPeriod = pricerLockingPeriod[pricer];\\n\\n            return now > _expiryTimestamp.add(lockingPeriod);\\n        }\\n\\n        return true;\\n    }\\n\\n    /**\\n     * @notice check if the dispute period is over\\n     * @param _asset asset address\\n     * @param _expiryTimestamp expiry timestamp\\n     * @return True if dispute period is over, False if not\\n     */\\n    function isDisputePeriodOver(address _asset, uint256 _expiryTimestamp) public view returns (bool) {\\n        uint256 price = stablePrice[_asset];\\n\\n        if (price == 0) {\\n            // check if the pricer has a price for this expiry timestamp\\n            Price memory price = storedPrice[_asset][_expiryTimestamp];\\n            if (price.timestamp == 0) {\\n                return false;\\n            }\\n\\n            address pricer = assetPricer[_asset];\\n            uint256 disputePeriod = pricerDisputePeriod[pricer];\\n\\n            return now > price.timestamp.add(disputePeriod);\\n        }\\n\\n        return true;\\n    }\\n}\\n\",\"keccak256\":\"0x39b562241100dd96a5c2797514b75d4e7f817d2abcd713e9d02f32a09d5df976\",\"license\":\"UNLICENSED\"},\"contracts/interfaces/OpynPricerInterface.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.6.10;\\n\\ninterface OpynPricerInterface {\\n    function getPrice() external view returns (uint256);\\n\\n    function getHistoricalPrice(uint80 _roundId) external view returns (uint256, uint256);\\n}\\n\",\"keccak256\":\"0xa937e5fa413ff096600cd4bb62795cda1aa6916a3ad4b1e50ab11aaf5cdd07c5\",\"license\":\"UNLICENSED\"},\"contracts/packages/oz/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// openzeppelin-contracts v3.1.0\\n\\npragma solidity 0.6.10;\\n\\n/*\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with GSN meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address payable) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes memory) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0x35b3e8e1595be9615789db07354d46bf44adf46be977b76a467ad9edc092e950\",\"license\":\"MIT\"},\"contracts/packages/oz/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// openzeppelin-contracts v3.1.0\\n\\npragma solidity 0.6.10;\\n\\nimport \\\"./Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\ncontract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor() internal {\\n        address msgSender = _msgSender();\\n        _owner = msgSender;\\n        emit OwnershipTransferred(address(0), msgSender);\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(_owner == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        emit OwnershipTransferred(_owner, address(0));\\n        _owner = address(0);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        emit OwnershipTransferred(_owner, newOwner);\\n        _owner = newOwner;\\n    }\\n}\\n\",\"keccak256\":\"0xb6d430bc79061b7e7115f305f00c7d65e52d0cc9357eb5a9c88d4aa6fa643ec5\",\"license\":\"MIT\"},\"contracts/packages/oz/SafeMath.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// openzeppelin-contracts v3.1.0\\n\\n/* solhint-disable */\\npragma solidity ^0.6.0;\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations with added overflow\\n * checks.\\n *\\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\\n * in bugs, because programmers usually assume that an overflow raises an\\n * error, which is the standard behavior in high level programming languages.\\n * `SafeMath` restores this intuition by reverting the transaction when an\\n * operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        uint256 c = a + b;\\n        require(c >= a, \\\"SafeMath: addition overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return sub(a, b, \\\"SafeMath: subtraction overflow\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(\\n        uint256 a,\\n        uint256 b,\\n        string memory errorMessage\\n    ) internal pure returns (uint256) {\\n        require(b <= a, errorMessage);\\n        uint256 c = a - b;\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n        // benefit is lost if 'b' is also tested.\\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n        if (a == 0) {\\n            return 0;\\n        }\\n\\n        uint256 c = a * b;\\n        require(c / a == b, \\\"SafeMath: multiplication overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return div(a, b, \\\"SafeMath: division by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function div(\\n        uint256 a,\\n        uint256 b,\\n        string memory errorMessage\\n    ) internal pure returns (uint256) {\\n        // Solidity only automatically asserts when dividing by 0\\n        require(b > 0, errorMessage);\\n        uint256 c = a / b;\\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return mod(a, b, \\\"SafeMath: modulo by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts with custom message when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(\\n        uint256 a,\\n        uint256 b,\\n        string memory errorMessage\\n    ) internal pure returns (uint256) {\\n        require(b != 0, errorMessage);\\n        return a % b;\\n    }\\n}\\n\",\"keccak256\":\"0xe257e662689b978c321f9618441d4e0233276acea88093d3d344873592636c18\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060006100246001600160e01b0361007316565b600080546001600160a01b0319166001600160a01b0383169081178255604051929350917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a350610077565b3390565b6116a8806100866000396000f3fe608060405234801561001057600080fd5b50600436106101375760003560e01c8063715018a6116100b8578063b7e1d1451161007c578063b7e1d1451461047c578063d2f3b4e8146104a2578063def3cb05146104ce578063ee531409146104d6578063f19ae73414610508578063f2fde38b1461053457610137565b8063715018a6146103f45780638b3cddaf146103fc5780638da5cb5b146104285780638ee5074d146104305780639c7fe9d61461045657610137565b806341976e09116100ff57806341976e091461031657806357a37dca1461034e5780635fdc714914610380578063601407eb146103c05780636c525d04146103ec57610137565b806301957f811461013c5780631b85462d146101815780632e4cf6ea146101d25780632ecd8857146102a65780633fd3ec8f146102e8575b600080fd5b6101686004803603604081101561015257600080fd5b506001600160a01b03813516906020013561055a565b6040805192835290151560208301528051918290030190f35b6101b96004803603604081101561019757600080fd5b5080356001600160a01b0316906020013569ffffffffffffffffffff166105ba565b6040805192835260208301919091528051918290030190f35b6102a4600480360360608110156101e857600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561021357600080fd5b82018360208201111561022557600080fd5b8035906020019184602083028401116401000000008311171561024757600080fd5b91939092909160208101903564010000000081111561026557600080fd5b82018360208201111561027757600080fd5b8035906020019184602083028401116401000000008311171561029957600080fd5b5090925090506106d7565b005b6102cc600480360360208110156102bc57600080fd5b50356001600160a01b031661087c565b604080516001600160a01b039092168252519081900360200190f35b6102a4600480360360408110156102fe57600080fd5b506001600160a01b038135811691602001351661089a565b61033c6004803603602081101561032c57600080fd5b50356001600160a01b03166109e3565b60408051918252519081900360200190f35b6102a46004803603606081101561036457600080fd5b506001600160a01b038135169060208101359060400135610ada565b6103ac6004803603604081101561039657600080fd5b506001600160a01b038135169060200135610c3a565b604080519115158252519081900360200190f35b6102a4600480360360408110156103d657600080fd5b506001600160a01b038135169060200135610d01565b6102a4610e04565b6102a4610e71565b6102a46004803603604081101561041257600080fd5b506001600160a01b038135169060200135610f13565b6102cc610fbf565b6102a46004803603602081101561044657600080fd5b50356001600160a01b0316610fce565b61033c6004803603602081101561046c57600080fd5b50356001600160a01b0316611070565b61033c6004803603602081101561049257600080fd5b50356001600160a01b031661108b565b6103ac600480360360408110156104b857600080fd5b506001600160a01b0381351690602001356110a6565b6102cc61110c565b6102a4600480360360608110156104ec57600080fd5b506001600160a01b03813516906020810135906040013561111b565b6102a46004803603604081101561051e57600080fd5b506001600160a01b0381351690602001356112b0565b6102a46004803603602081101561054a57600080fd5b50356001600160a01b031661135c565b6001600160a01b03821660009081526006602052604081205481906001816105af576001600160a01b038616600090815260056020908152604080832088845290915290205491506105ac8686610c3a565b90505b909590945092505050565b6001600160a01b038216600090815260066020526040812054819042816105af576001600160a01b03868116600090815260046020526040902054166106315760405162461bcd60e51b81526004018080602001828103825260258152602001806115316025913960400191505060405180910390fd5b6001600160a01b038087166000908152600460208190526040918290205482516303bb0ddf60e61b815269ffffffffffffffffffff8a1692810192909252825193169263eec377c092602480840193919291829003018186803b15801561069757600080fd5b505afa1580156106ab573d6000803e3d6000fd5b505050506040513d60408110156106c157600080fd5b5080516020909101519097909650945050505050565b6106df611454565b6000546001600160a01b0390811691161461072f576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b600154600160a01b900460ff161561078e576040805162461bcd60e51b815260206004820152601e60248201527f4f7261636c653a206d6967726174696f6e20616c726561647920646f6e650000604482015290519081900360640190fd5b8281146107e2576040805162461bcd60e51b815260206004820152601e60248201527f4f7261636c653a20696e76616c6964206d6967726174696f6e20646174610000604482015290519081900360640190fd5b60005b8381101561087457604051806040016040528084848481811061080457fe5b9050602002013581526020014281525060056000886001600160a01b03166001600160a01b03168152602001908152602001600020600087878581811061084757fe5b602090810292909201358352508181019290925260400160002082518155910151600191820155016107e5565b505050505050565b6001600160a01b039081166000908152600460205260409020541690565b6108a2611454565b6000546001600160a01b039081169116146108f2576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b0381166109375760405162461bcd60e51b81526004018080602001828103825260278152602001806116186027913960400191505060405180910390fd5b6001600160a01b0382166000908152600660205260409020541561098c5760405162461bcd60e51b815260040180806020018281038252602f8152602001806115e9602f913960400191505060405180910390fd5b6001600160a01b0382811660008181526004602052604080822080546001600160a01b0319169486169485179055517fac44f446a94cf337a8403cfa1764d3ab060f166e1e6d0fb2e7ccbb4889ce948d9190a35050565b6001600160a01b03811660009081526006602052604081205480610ad4576001600160a01b0383811660009081526004602052604090205416610a575760405162461bcd60e51b81526004018080602001828103825260258152602001806115316025913960400191505060405180910390fd5b6001600160a01b03808416600090815260046020818152604092839020548351634c6afee560e11b815293519416936398d5fdca938084019390829003018186803b158015610aa557600080fd5b505afa158015610ab9573d6000803e3d6000fd5b505050506040513d6020811015610acf57600080fd5b505190505b92915050565b6001546001600160a01b03163314610b235760405162461bcd60e51b81526004018080602001828103825260228152602001806114d46022913960400191505060405180910390fd5b610b2d8383610c3a565b15610b7f576040805162461bcd60e51b815260206004820152601b60248201527f4f7261636c653a206469737075746520706572696f64206f7665720000000000604482015290519081900360640190fd5b6001600160a01b038316600090815260056020908152604080832085845290915290206001810154610be25760405162461bcd60e51b815260040180806020018281038252602781526020018061157c6027913960400191505060405180910390fd5b805482825560408051828152602081018590524281830152905185916001600160a01b038816917f4c65ea297e9cdfe46f796ae9f245f80e9952cc9ee0544e9c5e5384e06e396ee09181900360600190a35050505050565b6001600160a01b03821660009081526006602052604081205480610cf757610c606114b9565b506001600160a01b038416600090815260056020908152604080832086845282529182902082518084019093528054835260010154908201819052610caa57600092505050610ad4565b6001600160a01b0380861660009081526004602090815260408083205490931680835260038252929091205490830151610cea908263ffffffff61145816565b4211945050505050610ad4565b5060019392505050565b610d09611454565b6000546001600160a01b03908116911614610d59576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b038281166000908152600460205260409020541615610db05760405162461bcd60e51b815260040180806020018281038252603b8152602001806114f6603b913960400191505060405180910390fd5b6001600160a01b038216600081815260066020908152604091829020849055815184815291517f4e5ecd60f0bbcaa2960ee093d3c7a8bf1e265338cae3032cc13adf65e95fa3259281900390910190a25050565b610e0c611454565b6000546001600160a01b03908116911614610e5c576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001805460ff60a01b1916600160a01b179055565b610e79611454565b6000546001600160a01b03908116911614610ec9576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b610f1b611454565b6000546001600160a01b03908116911614610f6b576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b038216600081815260036020908152604091829020849055815184815291517ff43f15b56789f3f735684531c1885129263b256f59dc4c71b211722a2f954d969281900390910190a25050565b6000546001600160a01b031690565b610fd6611454565b6000546001600160a01b03908116911614611026576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b600180546001600160a01b0319166001600160a01b0383169081179091556040517fc0c3569eac4e1b890a966a247a7b7f0d496af49f2fc482b2959899b634693cfd90600090a250565b6001600160a01b031660009081526003602052604090205490565b6001600160a01b031660009081526002602052604090205490565b6001600160a01b03821660009081526006602052604081205480610cf7576001600160a01b03808516600090815260046020908152604080832054909316808352600290915291902054611100858263ffffffff61145816565b42119350505050610ad4565b6001546001600160a01b031690565b6001600160a01b038381166000908152600460205260409020541633146111735760405162461bcd60e51b815260040180806020018281038252603481526020018061163f6034913960400191505060405180910390fd5b61117d83836110a6565b6111b85760405162461bcd60e51b81526004018080602001828103825260268152602001806115c36026913960400191505060405180910390fd5b6001600160a01b038316600090815260056020908152604080832085845290915290206001015415611231576040805162461bcd60e51b815260206004820152601e60248201527f4f7261636c653a206469737075746520706572696f6420737461727465640000604482015290519081900360640190fd5b6040805180820182528281524260208083018281526001600160a01b0388166000818152600584528681208982528452869020945185559051600190940193909355835185815290810191909152825185937f0160752083b78189f1650efb0abdaa0dd2110e5782f553c825705746ac2a5718928290030190a3505050565b6112b8611454565b6000546001600160a01b03908116911614611308576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b038216600081815260026020908152604091829020849055815184815291517fa8c3fc8bc370addd6cd25f335fb22ea56d17079376e28f460ca770f6d46b2c599281900390910190a25050565b611364611454565b6000546001600160a01b039081169116146113b4576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b0381166113f95760405162461bcd60e51b81526004018080602001828103825260268152602001806115566026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b3390565b6000828201838110156114b2576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b9392505050565b60405180604001604052806000815260200160008152509056fe4f7261636c653a2063616c6c6572206973206e6f74207468652064697370757465724f7261636c653a20636f756c64206e6f742073657420737461626c6520707269636520666f7220616e2061737365742077697468207072696365724f7261636c653a2050726963657220666f722074686973206173736574206e6f74207365744f776e61626c653a206e6577206f776e657220697320746865207a65726f20616464726573734f7261636c653a20707269636520746f206469737075746520646f6573206e6f742065786973744f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65724f7261636c653a206c6f636b696e6720706572696f64206973206e6f74206f766572207965744f7261636c653a20636f756c64206e6f742073657420612070726963657220666f7220737461626c652061737365744f7261636c653a2063616e6e6f74207365742070726963657220746f20616464726573732830294f7261636c653a2063616c6c6572206973206e6f7420617574686f72697a656420746f2073657420657870697279207072696365a264697066735822122084198175abc077c7d179c3c8bb6943a7ba2e20b04cb33ff64cd4fcc14e2f389a64736f6c634300060a0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101375760003560e01c8063715018a6116100b8578063b7e1d1451161007c578063b7e1d1451461047c578063d2f3b4e8146104a2578063def3cb05146104ce578063ee531409146104d6578063f19ae73414610508578063f2fde38b1461053457610137565b8063715018a6146103f45780638b3cddaf146103fc5780638da5cb5b146104285780638ee5074d146104305780639c7fe9d61461045657610137565b806341976e09116100ff57806341976e091461031657806357a37dca1461034e5780635fdc714914610380578063601407eb146103c05780636c525d04146103ec57610137565b806301957f811461013c5780631b85462d146101815780632e4cf6ea146101d25780632ecd8857146102a65780633fd3ec8f146102e8575b600080fd5b6101686004803603604081101561015257600080fd5b506001600160a01b03813516906020013561055a565b6040805192835290151560208301528051918290030190f35b6101b96004803603604081101561019757600080fd5b5080356001600160a01b0316906020013569ffffffffffffffffffff166105ba565b6040805192835260208301919091528051918290030190f35b6102a4600480360360608110156101e857600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561021357600080fd5b82018360208201111561022557600080fd5b8035906020019184602083028401116401000000008311171561024757600080fd5b91939092909160208101903564010000000081111561026557600080fd5b82018360208201111561027757600080fd5b8035906020019184602083028401116401000000008311171561029957600080fd5b5090925090506106d7565b005b6102cc600480360360208110156102bc57600080fd5b50356001600160a01b031661087c565b604080516001600160a01b039092168252519081900360200190f35b6102a4600480360360408110156102fe57600080fd5b506001600160a01b038135811691602001351661089a565b61033c6004803603602081101561032c57600080fd5b50356001600160a01b03166109e3565b60408051918252519081900360200190f35b6102a46004803603606081101561036457600080fd5b506001600160a01b038135169060208101359060400135610ada565b6103ac6004803603604081101561039657600080fd5b506001600160a01b038135169060200135610c3a565b604080519115158252519081900360200190f35b6102a4600480360360408110156103d657600080fd5b506001600160a01b038135169060200135610d01565b6102a4610e04565b6102a4610e71565b6102a46004803603604081101561041257600080fd5b506001600160a01b038135169060200135610f13565b6102cc610fbf565b6102a46004803603602081101561044657600080fd5b50356001600160a01b0316610fce565b61033c6004803603602081101561046c57600080fd5b50356001600160a01b0316611070565b61033c6004803603602081101561049257600080fd5b50356001600160a01b031661108b565b6103ac600480360360408110156104b857600080fd5b506001600160a01b0381351690602001356110a6565b6102cc61110c565b6102a4600480360360608110156104ec57600080fd5b506001600160a01b03813516906020810135906040013561111b565b6102a46004803603604081101561051e57600080fd5b506001600160a01b0381351690602001356112b0565b6102a46004803603602081101561054a57600080fd5b50356001600160a01b031661135c565b6001600160a01b03821660009081526006602052604081205481906001816105af576001600160a01b038616600090815260056020908152604080832088845290915290205491506105ac8686610c3a565b90505b909590945092505050565b6001600160a01b038216600090815260066020526040812054819042816105af576001600160a01b03868116600090815260046020526040902054166106315760405162461bcd60e51b81526004018080602001828103825260258152602001806115316025913960400191505060405180910390fd5b6001600160a01b038087166000908152600460208190526040918290205482516303bb0ddf60e61b815269ffffffffffffffffffff8a1692810192909252825193169263eec377c092602480840193919291829003018186803b15801561069757600080fd5b505afa1580156106ab573d6000803e3d6000fd5b505050506040513d60408110156106c157600080fd5b5080516020909101519097909650945050505050565b6106df611454565b6000546001600160a01b0390811691161461072f576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b600154600160a01b900460ff161561078e576040805162461bcd60e51b815260206004820152601e60248201527f4f7261636c653a206d6967726174696f6e20616c726561647920646f6e650000604482015290519081900360640190fd5b8281146107e2576040805162461bcd60e51b815260206004820152601e60248201527f4f7261636c653a20696e76616c6964206d6967726174696f6e20646174610000604482015290519081900360640190fd5b60005b8381101561087457604051806040016040528084848481811061080457fe5b9050602002013581526020014281525060056000886001600160a01b03166001600160a01b03168152602001908152602001600020600087878581811061084757fe5b602090810292909201358352508181019290925260400160002082518155910151600191820155016107e5565b505050505050565b6001600160a01b039081166000908152600460205260409020541690565b6108a2611454565b6000546001600160a01b039081169116146108f2576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b0381166109375760405162461bcd60e51b81526004018080602001828103825260278152602001806116186027913960400191505060405180910390fd5b6001600160a01b0382166000908152600660205260409020541561098c5760405162461bcd60e51b815260040180806020018281038252602f8152602001806115e9602f913960400191505060405180910390fd5b6001600160a01b0382811660008181526004602052604080822080546001600160a01b0319169486169485179055517fac44f446a94cf337a8403cfa1764d3ab060f166e1e6d0fb2e7ccbb4889ce948d9190a35050565b6001600160a01b03811660009081526006602052604081205480610ad4576001600160a01b0383811660009081526004602052604090205416610a575760405162461bcd60e51b81526004018080602001828103825260258152602001806115316025913960400191505060405180910390fd5b6001600160a01b03808416600090815260046020818152604092839020548351634c6afee560e11b815293519416936398d5fdca938084019390829003018186803b158015610aa557600080fd5b505afa158015610ab9573d6000803e3d6000fd5b505050506040513d6020811015610acf57600080fd5b505190505b92915050565b6001546001600160a01b03163314610b235760405162461bcd60e51b81526004018080602001828103825260228152602001806114d46022913960400191505060405180910390fd5b610b2d8383610c3a565b15610b7f576040805162461bcd60e51b815260206004820152601b60248201527f4f7261636c653a206469737075746520706572696f64206f7665720000000000604482015290519081900360640190fd5b6001600160a01b038316600090815260056020908152604080832085845290915290206001810154610be25760405162461bcd60e51b815260040180806020018281038252602781526020018061157c6027913960400191505060405180910390fd5b805482825560408051828152602081018590524281830152905185916001600160a01b038816917f4c65ea297e9cdfe46f796ae9f245f80e9952cc9ee0544e9c5e5384e06e396ee09181900360600190a35050505050565b6001600160a01b03821660009081526006602052604081205480610cf757610c606114b9565b506001600160a01b038416600090815260056020908152604080832086845282529182902082518084019093528054835260010154908201819052610caa57600092505050610ad4565b6001600160a01b0380861660009081526004602090815260408083205490931680835260038252929091205490830151610cea908263ffffffff61145816565b4211945050505050610ad4565b5060019392505050565b610d09611454565b6000546001600160a01b03908116911614610d59576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b038281166000908152600460205260409020541615610db05760405162461bcd60e51b815260040180806020018281038252603b8152602001806114f6603b913960400191505060405180910390fd5b6001600160a01b038216600081815260066020908152604091829020849055815184815291517f4e5ecd60f0bbcaa2960ee093d3c7a8bf1e265338cae3032cc13adf65e95fa3259281900390910190a25050565b610e0c611454565b6000546001600160a01b03908116911614610e5c576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001805460ff60a01b1916600160a01b179055565b610e79611454565b6000546001600160a01b03908116911614610ec9576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b610f1b611454565b6000546001600160a01b03908116911614610f6b576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b038216600081815260036020908152604091829020849055815184815291517ff43f15b56789f3f735684531c1885129263b256f59dc4c71b211722a2f954d969281900390910190a25050565b6000546001600160a01b031690565b610fd6611454565b6000546001600160a01b03908116911614611026576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b600180546001600160a01b0319166001600160a01b0383169081179091556040517fc0c3569eac4e1b890a966a247a7b7f0d496af49f2fc482b2959899b634693cfd90600090a250565b6001600160a01b031660009081526003602052604090205490565b6001600160a01b031660009081526002602052604090205490565b6001600160a01b03821660009081526006602052604081205480610cf7576001600160a01b03808516600090815260046020908152604080832054909316808352600290915291902054611100858263ffffffff61145816565b42119350505050610ad4565b6001546001600160a01b031690565b6001600160a01b038381166000908152600460205260409020541633146111735760405162461bcd60e51b815260040180806020018281038252603481526020018061163f6034913960400191505060405180910390fd5b61117d83836110a6565b6111b85760405162461bcd60e51b81526004018080602001828103825260268152602001806115c36026913960400191505060405180910390fd5b6001600160a01b038316600090815260056020908152604080832085845290915290206001015415611231576040805162461bcd60e51b815260206004820152601e60248201527f4f7261636c653a206469737075746520706572696f6420737461727465640000604482015290519081900360640190fd5b6040805180820182528281524260208083018281526001600160a01b0388166000818152600584528681208982528452869020945185559051600190940193909355835185815290810191909152825185937f0160752083b78189f1650efb0abdaa0dd2110e5782f553c825705746ac2a5718928290030190a3505050565b6112b8611454565b6000546001600160a01b03908116911614611308576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b038216600081815260026020908152604091829020849055815184815291517fa8c3fc8bc370addd6cd25f335fb22ea56d17079376e28f460ca770f6d46b2c599281900390910190a25050565b611364611454565b6000546001600160a01b039081169116146113b4576040805162461bcd60e51b815260206004820181905260248201526000805160206115a3833981519152604482015290519081900360640190fd5b6001600160a01b0381166113f95760405162461bcd60e51b81526004018080602001828103825260268152602001806115566026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b3390565b6000828201838110156114b2576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b9392505050565b60405180604001604052806000815260200160008152509056fe4f7261636c653a2063616c6c6572206973206e6f74207468652064697370757465724f7261636c653a20636f756c64206e6f742073657420737461626c6520707269636520666f7220616e2061737365742077697468207072696365724f7261636c653a2050726963657220666f722074686973206173736574206e6f74207365744f776e61626c653a206e6577206f776e657220697320746865207a65726f20616464726573734f7261636c653a20707269636520746f206469737075746520646f6573206e6f742065786973744f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65724f7261636c653a206c6f636b696e6720706572696f64206973206e6f74206f766572207965744f7261636c653a20636f756c64206e6f742073657420612070726963657220666f7220737461626c652061737365744f7261636c653a2063616e6e6f74207365742070726963657220746f20616464726573732830294f7261636c653a2063616c6c6572206973206e6f7420617574686f72697a656420746f2073657420657870697279207072696365a264697066735822122084198175abc077c7d179c3c8bb6943a7ba2e20b04cb33ff64cd4fcc14e2f389a64736f6c634300060a0033",
+  "devdoc": {
+    "author": "Opyn Team",
+    "methods": {
+      "disputeExpiryPrice(address,uint256,uint256)": {
+        "details": "only the disputer can dispute a price during the dispute period, by setting a new one",
+        "params": {
+          "_asset": "asset address",
+          "_expiryTimestamp": "expiry timestamp",
+          "_price": "the correct price"
+        }
+      },
+      "endMigration()": {
+        "details": "can only be called by owner, should be called before setting Oracle module into AddressBook"
+      },
+      "getChainlinkRoundData(address,uint80)": {
+        "details": "if asset is a stable asset, will return stored price and timestamp equal to now",
+        "params": {
+          "_asset": "asset address to get it's historical price",
+          "_roundId": "chainlink round id"
+        },
+        "returns": {
+          "_0": "price and round timestamp"
+        }
+      },
+      "getDisputer()": {
+        "returns": {
+          "_0": "disputer address"
+        }
+      },
+      "getExpiryPrice(address,uint256)": {
+        "params": {
+          "_asset": "asset address",
+          "_expiryTimestamp": "expiry timestamp"
+        },
+        "returns": {
+          "_0": "price scaled by 1e8, denominated in USD",
+          "_1": "isFinalized True, if the price is finalized, False if not"
+        }
+      },
+      "getPrice(address)": {
+        "params": {
+          "_asset": "asset address"
+        },
+        "returns": {
+          "_0": "price scaled by 1e8, denominated in USD e.g. 17568900000 => 175.689 USD"
+        }
+      },
+      "getPricer(address)": {
+        "params": {
+          "_asset": "asset address"
+        },
+        "returns": {
+          "_0": "pricer address"
+        }
+      },
+      "getPricerDisputePeriod(address)": {
+        "details": "during the dispute period, the disputer can dispute the submitted price and modify it",
+        "params": {
+          "_pricer": "pricer address"
+        },
+        "returns": {
+          "_0": "dispute period"
+        }
+      },
+      "getPricerLockingPeriod(address)": {
+        "details": "during the locking period an expiry price can not be submitted to this contract",
+        "params": {
+          "_pricer": "pricer address"
+        },
+        "returns": {
+          "_0": "locking period"
+        }
+      },
+      "isDisputePeriodOver(address,uint256)": {
+        "params": {
+          "_asset": "asset address",
+          "_expiryTimestamp": "expiry timestamp"
+        },
+        "returns": {
+          "_0": "True if dispute period is over, False if not"
+        }
+      },
+      "isLockingPeriodOver(address,uint256)": {
+        "params": {
+          "_asset": "asset address",
+          "_expiryTimestamp": "expiry timestamp"
+        },
+        "returns": {
+          "_0": "True if locking period is over, False if not"
+        }
+      },
+      "migrateOracle(address,uint256[],uint256[])": {
+        "details": "this can only be called by owner, should be used at the deployment time before setting Oracle module into AddressBook",
+        "params": {
+          "_asset": "asset address",
+          "_expiries": "array of expiries timestamps",
+          "_prices": "array of prices"
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "setAssetPricer(address,address)": {
+        "details": "can only be called by the owner",
+        "params": {
+          "_asset": "asset address",
+          "_pricer": "pricer address"
+        }
+      },
+      "setDisputePeriod(address,uint256)": {
+        "details": "can only be called by the owner for a composite pricer (ie CompoundPricer) that depends on or calls other pricers, ensure that the dispute period for the composite pricer is longer than the dispute period for the asset pricer that it calls to ensure safe usage as a dispute in the other pricer will cause the need for a dispute with the composite pricer's price",
+        "params": {
+          "_disputePeriod": "dispute period",
+          "_pricer": "pricer address"
+        }
+      },
+      "setDisputer(address)": {
+        "details": "can only be called by the owner",
+        "params": {
+          "_disputer": "disputer address"
+        }
+      },
+      "setExpiryPrice(address,uint256,uint256)": {
+        "details": "asset price can only be set after the locking period is over and before the dispute period has started",
+        "params": {
+          "_asset": "asset address",
+          "_expiryTimestamp": "expiry timestamp",
+          "_price": "asset price at expiry"
+        }
+      },
+      "setLockingPeriod(address,uint256)": {
+        "details": "can only be called by the owner",
+        "params": {
+          "_lockingPeriod": "locking period",
+          "_pricer": "pricer address"
+        }
+      },
+      "setStablePrice(address,uint256)": {
+        "details": "price should be scaled by 1e8",
+        "params": {
+          "_asset": "asset address",
+          "_price": "price"
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "stateVariables": {
+      "assetPricer": {
+        "details": "mapping between an asset and its pricer"
+      },
+      "disputer": {
+        "details": "disputer is a role defined by the owner that has the ability to dispute a price during the dispute period"
+      },
+      "pricerDisputePeriod": {
+        "details": "mapping of asset pricer to its dispute period dispute period is the period of time after an expiry price has been pushed where a price can be disputed"
+      },
+      "pricerLockingPeriod": {
+        "details": "mapping of asset pricer to its locking period locking period is the period of time after the expiry timestamp where a price can not be pushed"
+      },
+      "stablePrice": {
+        "details": "mapping between stable asset and price"
+      },
+      "storedPrice": {
+        "details": "mapping between asset, expiry timestamp, and the Price structure at the expiry timestamp"
+      }
+    },
+    "title": "Oracle Module"
+  },
+  "userdoc": {
+    "methods": {
+      "disputeExpiryPrice(address,uint256,uint256)": {
+        "notice": "dispute an asset price during the dispute period"
+      },
+      "endMigration()": {
+        "notice": "end migration process"
+      },
+      "getChainlinkRoundData(address,uint80)": {
+        "notice": "get historical asset price and timestamp"
+      },
+      "getDisputer()": {
+        "notice": "get the disputer address"
+      },
+      "getExpiryPrice(address,uint256)": {
+        "notice": "get the asset price at specific expiry timestamp"
+      },
+      "getPrice(address)": {
+        "notice": "get a live asset price from the asset's pricer contract"
+      },
+      "getPricer(address)": {
+        "notice": "get the pricer for an asset"
+      },
+      "getPricerDisputePeriod(address)": {
+        "notice": "get a pricer's dispute period dispute period is the period of time after an expiry price has been pushed where a price can be disputed"
+      },
+      "getPricerLockingPeriod(address)": {
+        "notice": "get a pricer's locking period locking period is the period of time after the expiry timestamp where a price can not be pushed"
+      },
+      "isDisputePeriodOver(address,uint256)": {
+        "notice": "check if the dispute period is over"
+      },
+      "isLockingPeriodOver(address,uint256)": {
+        "notice": "check if the locking period is over for setting the asset price at a particular expiry timestamp"
+      },
+      "migrateOracle(address,uint256[],uint256[])": {
+        "notice": "function to migrate asset prices from old oracle to new deployed oracle"
+      },
+      "setAssetPricer(address,address)": {
+        "notice": "sets the pricer for an asset"
+      },
+      "setDisputePeriod(address,uint256)": {
+        "notice": "sets the dispute period for a pricer"
+      },
+      "setDisputer(address)": {
+        "notice": "set the disputer address"
+      },
+      "setExpiryPrice(address,uint256,uint256)": {
+        "notice": "submits the expiry price to the oracle, can only be set from the pricer"
+      },
+      "setLockingPeriod(address,uint256)": {
+        "notice": "sets the locking period for a pricer"
+      },
+      "setStablePrice(address,uint256)": {
+        "notice": "set stable asset price"
+      }
+    },
+    "notice": "The Oracle module sets, retrieves, and stores USD prices (USD per asset) for underlying, collateral, and strike assets manages pricers that are used for different assets"
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 13735,
+        "contract": "contracts/core/Oracle.sol:Oracle",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 6360,
+        "contract": "contracts/core/Oracle.sol:Oracle",
+        "label": "disputer",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 6362,
+        "contract": "contracts/core/Oracle.sol:Oracle",
+        "label": "migrated",
+        "offset": 20,
+        "slot": "1",
+        "type": "t_bool"
+      },
+      {
+        "astId": 6367,
+        "contract": "contracts/core/Oracle.sol:Oracle",
+        "label": "pricerLockingPeriod",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 6372,
+        "contract": "contracts/core/Oracle.sol:Oracle",
+        "label": "pricerDisputePeriod",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 6377,
+        "contract": "contracts/core/Oracle.sol:Oracle",
+        "label": "assetPricer",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_address)"
+      },
+      {
+        "astId": 6384,
+        "contract": "contracts/core/Oracle.sol:Oracle",
+        "label": "storedPrice",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_mapping(t_address,t_mapping(t_uint256,t_struct(Price)6357_storage))"
+      },
+      {
+        "astId": 6389,
+        "contract": "contracts/core/Oracle.sol:Oracle",
+        "label": "stablePrice",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_address)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_mapping(t_address,t_mapping(t_uint256,t_struct(Price)6357_storage))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(uint256 => struct Oracle.Price))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_uint256,t_struct(Price)6357_storage)"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_uint256,t_struct(Price)6357_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct Oracle.Price)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Price)6357_storage"
+      },
+      "t_struct(Price)6357_storage": {
+        "encoding": "inplace",
+        "label": "struct Oracle.Price",
+        "members": [
+          {
+            "astId": 6354,
+            "contract": "contracts/core/Oracle.sol:Oracle",
+            "label": "price",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 6356,
+            "contract": "contracts/core/Oracle.sol:Oracle",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
