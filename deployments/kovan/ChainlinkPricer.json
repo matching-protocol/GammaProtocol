@@ -1,0 +1,311 @@
+{
+  "address": "0xA669C375E8c541C5e84fADa968c5c7dD16f3dC7d",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bot",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_asset",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_aggregator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_oracle",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "aggregator",
+      "outputs": [
+        {
+          "internalType": "contract AggregatorInterface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "aggregatorDecimals",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "asset",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "bot",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint80",
+          "name": "_roundId",
+          "type": "uint80"
+        }
+      ],
+      "name": "getHistoricalPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "oracle",
+      "outputs": [
+        {
+          "internalType": "contract OracleInterface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_expiryTimestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint80",
+          "name": "_roundId",
+          "type": "uint80"
+        }
+      ],
+      "name": "setExpiryPriceInOracle",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x66bda7bda2b7d466bfdb1873ed93c3c5ed165c50a57e210dc01f70892d5a9b38",
+  "receipt": {
+    "to": null,
+    "from": "0x3F57a38577F92adC561D8f4504832dCc34000f11",
+    "contractAddress": "0xA669C375E8c541C5e84fADa968c5c7dD16f3dC7d",
+    "transactionIndex": 0,
+    "gasUsed": "711707",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x373c089074fd64e86821ead631a7bd20b7cc57db88c78bcc075733a30385b53d",
+    "transactionHash": "0x66bda7bda2b7d466bfdb1873ed93c3c5ed165c50a57e210dc01f70892d5a9b38",
+    "logs": [],
+    "blockNumber": 30050433,
+    "cumulativeGasUsed": "711707",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x3F57a38577F92adC561D8f4504832dCc34000f11",
+    "0xd0A1E359811322d97991E03f863a0C30C2cF029C",
+    "0x9326BFA02ADD2366b30bacB125260Af641031331",
+    "0x69252109Ab2A7cC3e2B91d57359E6ebCb56f08f8"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "acd71413d86f7465252641f7fa8c1f03",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_bot\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_asset\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_aggregator\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_oracle\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"aggregator\",\"outputs\":[{\"internalType\":\"contract AggregatorInterface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"aggregatorDecimals\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"asset\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"bot\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint80\",\"name\":\"_roundId\",\"type\":\"uint80\"}],\"name\":\"getHistoricalPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracle\",\"outputs\":[{\"internalType\":\"contract OracleInterface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_expiryTimestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint80\",\"name\":\"_roundId\",\"type\":\"uint80\"}],\"name\":\"setExpiryPriceInOracle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"constructor\":{\"params\":{\"_aggregator\":\"Chainlink aggregator contract for the asset\",\"_asset\":\"asset that this pricer will get a price for\",\"_bot\":\"priveleged address that can call setExpiryPriceInOracle\",\"_oracle\":\"Opyn Oracle address\"}},\"getHistoricalPrice(uint80)\":{\"params\":{\"_roundId\":\"chainlink round id\"},\"returns\":{\"_0\":\"round price and timestamp\"}},\"getPrice()\":{\"details\":\"overides the getPrice function in OpynPricerInterface\",\"returns\":{\"_0\":\"price of the asset in USD, scaled by 1e8\"}},\"setExpiryPriceInOracle(uint256,uint80)\":{\"details\":\"a roundId must be provided to confirm price validity, which is the first Chainlink price provided after the expiryTimestamp\",\"params\":{\"_expiryTimestamp\":\"expiry to set a price for\",\"_roundId\":\"the first roundId after expiryTimestamp\"}}},\"stateVariables\":{\"BASE\":{\"details\":\"base decimals\"}}},\"userdoc\":{\"methods\":{\"aggregator()\":{\"notice\":\"the aggregator for an asset\"},\"aggregatorDecimals()\":{\"notice\":\"chainlink response decimals\"},\"asset()\":{\"notice\":\"asset that this pricer will a get price for\"},\"bot()\":{\"notice\":\"bot address that is allowed to call setExpiryPriceInOracle\"},\"getHistoricalPrice(uint80)\":{\"notice\":\"get historical chainlink price\"},\"getPrice()\":{\"notice\":\"get the live price for the asset\"},\"oracle()\":{\"notice\":\"the opyn oracle address\"},\"setExpiryPriceInOracle(uint256,uint80)\":{\"notice\":\"set the expiry price in the oracle, can only be called by Bot address\"}},\"notice\":\"A Pricer contract for one asset as reported by Chainlink\"}},\"settings\":{\"compilationTarget\":{\"contracts/pricers/ChainlinkPricer.sol\":\"ChainlinkPricer\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/interfaces/AggregatorInterface.sol\":{\"content\":\"/**\\n * SPDX-License-Identifier: UNLICENSED\\n */\\npragma solidity 0.6.10;\\n\\n/**\\n * @dev Interface of the Chainlink aggregator\\n */\\ninterface AggregatorInterface {\\n    function decimals() external view returns (uint8);\\n\\n    function description() external view returns (string memory);\\n\\n    function version() external view returns (uint256);\\n\\n    // getRoundData and latestRoundData should both raise \\\"No data present\\\"\\n    // if they do not have data to report, instead of returning unset values\\n    // which could be misinterpreted as actual reported values.\\n    function getRoundData(uint80 _roundId)\\n        external\\n        view\\n        returns (\\n            uint80 roundId,\\n            int256 answer,\\n            uint256 startedAt,\\n            uint256 updatedAt,\\n            uint80 answeredInRound\\n        );\\n\\n    function latestRoundData()\\n        external\\n        view\\n        returns (\\n            uint80 roundId,\\n            int256 answer,\\n            uint256 startedAt,\\n            uint256 updatedAt,\\n            uint80 answeredInRound\\n        );\\n}\\n\",\"keccak256\":\"0xc3c386002d1d3a237c8eb0c43c7b26b073f50ceeadfde0dfad3f131dd0a72fa5\",\"license\":\"UNLICENSED\"},\"contracts/interfaces/OpynPricerInterface.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.6.10;\\n\\ninterface OpynPricerInterface {\\n    function getPrice() external view returns (uint256);\\n\\n    function getHistoricalPrice(uint80 _roundId) external view returns (uint256, uint256);\\n}\\n\",\"keccak256\":\"0xa937e5fa413ff096600cd4bb62795cda1aa6916a3ad4b1e50ab11aaf5cdd07c5\",\"license\":\"UNLICENSED\"},\"contracts/interfaces/OracleInterface.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.6.10;\\n\\ninterface OracleInterface {\\n    function isLockingPeriodOver(address _asset, uint256 _expiryTimestamp) external view returns (bool);\\n\\n    function isDisputePeriodOver(address _asset, uint256 _expiryTimestamp) external view returns (bool);\\n\\n    function getExpiryPrice(address _asset, uint256 _expiryTimestamp) external view returns (uint256, bool);\\n\\n    function getDisputer() external view returns (address);\\n\\n    function getPricer(address _asset) external view returns (address);\\n\\n    function getPrice(address _asset) external view returns (uint256);\\n\\n    function getPricerLockingPeriod(address _pricer) external view returns (uint256);\\n\\n    function getPricerDisputePeriod(address _pricer) external view returns (uint256);\\n\\n    function getChainlinkRoundData(address _asset, uint80 _roundId) external view returns (uint256, uint256);\\n\\n    // Non-view function\\n\\n    function setAssetPricer(address _asset, address _pricer) external;\\n\\n    function setLockingPeriod(address _pricer, uint256 _lockingPeriod) external;\\n\\n    function setDisputePeriod(address _pricer, uint256 _disputePeriod) external;\\n\\n    function setExpiryPrice(\\n        address _asset,\\n        uint256 _expiryTimestamp,\\n        uint256 _price\\n    ) external;\\n\\n    function disputeExpiryPrice(\\n        address _asset,\\n        uint256 _expiryTimestamp,\\n        uint256 _price\\n    ) external;\\n\\n    function setDisputer(address _disputer) external;\\n}\\n\",\"keccak256\":\"0xb98928ca456c3b8d4056d9c90c7d07a8dea00d02059df57e528c13272327d3f7\",\"license\":\"UNLICENSED\"},\"contracts/packages/oz/SafeMath.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// openzeppelin-contracts v3.1.0\\n\\n/* solhint-disable */\\npragma solidity ^0.6.0;\\n\\n/**\\n * @dev Wrappers over Solidity's arithmetic operations with added overflow\\n * checks.\\n *\\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\\n * in bugs, because programmers usually assume that an overflow raises an\\n * error, which is the standard behavior in high level programming languages.\\n * `SafeMath` restores this intuition by reverting the transaction when an\\n * operation overflows.\\n *\\n * Using this library instead of the unchecked operations eliminates an entire\\n * class of bugs, so it's recommended to use it always.\\n */\\nlibrary SafeMath {\\n    /**\\n     * @dev Returns the addition of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `+` operator.\\n     *\\n     * Requirements:\\n     * - Addition cannot overflow.\\n     */\\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\\n        uint256 c = a + b;\\n        require(c >= a, \\\"SafeMath: addition overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return sub(a, b, \\\"SafeMath: subtraction overflow\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the subtraction of two unsigned integers, reverting with custom message on\\n     * overflow (when the result is negative).\\n     *\\n     * Counterpart to Solidity's `-` operator.\\n     *\\n     * Requirements:\\n     * - Subtraction cannot overflow.\\n     */\\n    function sub(\\n        uint256 a,\\n        uint256 b,\\n        string memory errorMessage\\n    ) internal pure returns (uint256) {\\n        require(b <= a, errorMessage);\\n        uint256 c = a - b;\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the multiplication of two unsigned integers, reverting on\\n     * overflow.\\n     *\\n     * Counterpart to Solidity's `*` operator.\\n     *\\n     * Requirements:\\n     * - Multiplication cannot overflow.\\n     */\\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\\n        // benefit is lost if 'b' is also tested.\\n        // See: https://github.com/OpenZeppelin/openzeppelin-contracts/pull/522\\n        if (a == 0) {\\n            return 0;\\n        }\\n\\n        uint256 c = a * b;\\n        require(c / a == b, \\\"SafeMath: multiplication overflow\\\");\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return div(a, b, \\\"SafeMath: division by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the integer division of two unsigned integers. Reverts with custom message on\\n     * division by zero. The result is rounded towards zero.\\n     *\\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\\n     * uses an invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function div(\\n        uint256 a,\\n        uint256 b,\\n        string memory errorMessage\\n    ) internal pure returns (uint256) {\\n        // Solidity only automatically asserts when dividing by 0\\n        require(b > 0, errorMessage);\\n        uint256 c = a / b;\\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\\n\\n        return c;\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\\n        return mod(a, b, \\\"SafeMath: modulo by zero\\\");\\n    }\\n\\n    /**\\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\\n     * Reverts with custom message when dividing by zero.\\n     *\\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\\n     * invalid opcode to revert (consuming all remaining gas).\\n     *\\n     * Requirements:\\n     * - The divisor cannot be zero.\\n     */\\n    function mod(\\n        uint256 a,\\n        uint256 b,\\n        string memory errorMessage\\n    ) internal pure returns (uint256) {\\n        require(b != 0, errorMessage);\\n        return a % b;\\n    }\\n}\\n\",\"keccak256\":\"0xe257e662689b978c321f9618441d4e0233276acea88093d3d344873592636c18\",\"license\":\"MIT\"},\"contracts/pricers/ChainlinkPricer.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.6.10;\\n\\nimport {AggregatorInterface} from \\\"../interfaces/AggregatorInterface.sol\\\";\\nimport {OracleInterface} from \\\"../interfaces/OracleInterface.sol\\\";\\nimport {OpynPricerInterface} from \\\"../interfaces/OpynPricerInterface.sol\\\";\\nimport {SafeMath} from \\\"../packages/oz/SafeMath.sol\\\";\\n\\n/**\\n * @notice A Pricer contract for one asset as reported by Chainlink\\n */\\ncontract ChainlinkPricer is OpynPricerInterface {\\n    using SafeMath for uint256;\\n\\n    /// @dev base decimals\\n    uint256 internal constant BASE = 8;\\n\\n    /// @notice chainlink response decimals\\n    uint256 public aggregatorDecimals;\\n\\n    /// @notice the opyn oracle address\\n    OracleInterface public oracle;\\n    /// @notice the aggregator for an asset\\n    AggregatorInterface public aggregator;\\n\\n    /// @notice asset that this pricer will a get price for\\n    address public asset;\\n    /// @notice bot address that is allowed to call setExpiryPriceInOracle\\n    address public bot;\\n\\n    /**\\n     * @param _bot priveleged address that can call setExpiryPriceInOracle\\n     * @param _asset asset that this pricer will get a price for\\n     * @param _aggregator Chainlink aggregator contract for the asset\\n     * @param _oracle Opyn Oracle address\\n     */\\n    constructor(\\n        address _bot,\\n        address _asset,\\n        address _aggregator,\\n        address _oracle\\n    ) public {\\n        require(_bot != address(0), \\\"ChainLinkPricer: Cannot set 0 address as bot\\\");\\n        require(_oracle != address(0), \\\"ChainLinkPricer: Cannot set 0 address as oracle\\\");\\n        require(_aggregator != address(0), \\\"ChainLinkPricer: Cannot set 0 address as aggregator\\\");\\n\\n        bot = _bot;\\n        oracle = OracleInterface(_oracle);\\n        aggregator = AggregatorInterface(_aggregator);\\n        asset = _asset;\\n\\n        aggregatorDecimals = uint256(aggregator.decimals());\\n    }\\n\\n    /**\\n     * @notice set the expiry price in the oracle, can only be called by Bot address\\n     * @dev a roundId must be provided to confirm price validity, which is the first Chainlink price provided after the expiryTimestamp\\n     * @param _expiryTimestamp expiry to set a price for\\n     * @param _roundId the first roundId after expiryTimestamp\\n     */\\n    function setExpiryPriceInOracle(uint256 _expiryTimestamp, uint80 _roundId) external {\\n        (, int256 price, , uint256 roundTimestamp, ) = aggregator.getRoundData(_roundId);\\n\\n        require(_expiryTimestamp <= roundTimestamp, \\\"ChainLinkPricer: roundId not first after expiry\\\");\\n        require(price >= 0, \\\"ChainLinkPricer: invalid price\\\");\\n\\n        if (msg.sender != bot) {\\n            bool isCorrectRoundId;\\n            uint80 previousRoundId = uint80(uint256(_roundId).sub(1));\\n\\n            while (!isCorrectRoundId) {\\n                (, , , uint256 previousRoundTimestamp, ) = aggregator.getRoundData(previousRoundId);\\n\\n                if (previousRoundTimestamp == 0) {\\n                    require(previousRoundId > 0, \\\"ChainLinkPricer: Invalid previousRoundId\\\");\\n                    previousRoundId = previousRoundId - 1;\\n                } else if (previousRoundTimestamp > _expiryTimestamp) {\\n                    revert(\\\"ChainLinkPricer: previousRoundId not last before expiry\\\");\\n                } else {\\n                    isCorrectRoundId = true;\\n                }\\n            }\\n        }\\n\\n        oracle.setExpiryPrice(asset, _expiryTimestamp, uint256(price));\\n    }\\n\\n    /**\\n     * @notice get the live price for the asset\\n     * @dev overides the getPrice function in OpynPricerInterface\\n     * @return price of the asset in USD, scaled by 1e8\\n     */\\n    function getPrice() external view override returns (uint256) {\\n        (, int256 answer, , , ) = aggregator.latestRoundData();\\n        require(answer > 0, \\\"ChainLinkPricer: price is lower than 0\\\");\\n        // chainlink's answer is already 1e8\\n        return _scaleToBase(uint256(answer));\\n    }\\n\\n    /**\\n     * @notice get historical chainlink price\\n     * @param _roundId chainlink round id\\n     * @return round price and timestamp\\n     */\\n    function getHistoricalPrice(uint80 _roundId) external view override returns (uint256, uint256) {\\n        (, int256 price, , uint256 roundTimestamp, ) = aggregator.getRoundData(_roundId);\\n        return (_scaleToBase(uint256(price)), roundTimestamp);\\n    }\\n\\n    /**\\n     * @notice scale aggregator response to base decimals (1e8)\\n     * @param _price aggregator price\\n     * @return price scaled to 1e8\\n     */\\n    function _scaleToBase(uint256 _price) internal view returns (uint256) {\\n        if (aggregatorDecimals > BASE) {\\n            uint256 exp = aggregatorDecimals.sub(BASE);\\n            _price = _price.div(10**exp);\\n        } else if (aggregatorDecimals < BASE) {\\n            uint256 exp = BASE.sub(aggregatorDecimals);\\n            _price = _price.mul(10**exp);\\n        }\\n\\n        return _price;\\n    }\\n}\\n\",\"keccak256\":\"0x2bb955da73f632caa8f0ea31e5be650d762c25b5a58972fced938f9e2630f698\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610bf1380380610bf18339818101604052608081101561003357600080fd5b50805160208201516040830151606090930151919290916001600160a01b03841661008f5760405162461bcd60e51b815260040180806020018281038252602c815260200180610bc5602c913960400191505060405180910390fd5b6001600160a01b0381166100d45760405162461bcd60e51b815260040180806020018281038252602f815260200180610b63602f913960400191505060405180910390fd5b6001600160a01b0382166101195760405162461bcd60e51b8152600401808060200182810382526033815260200180610b926033913960400191505060405180910390fd5b600480546001600160a01b03199081166001600160a01b03878116919091178355600180548316858316179055600280548316868316179081905560038054909316878316179092556040805163313ce56760e01b81529051929091169263313ce567928282019260209290829003018186803b15801561019957600080fd5b505afa1580156101ad573d6000803e3d6000fd5b505050506040513d60208110156101c357600080fd5b505160ff1660005550505050610985806101de6000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c80637dc0d1d01161005b5780637dc0d1d0146100db57806398d5fdca146100e3578063b2b63d9f146100eb578063eec377c01461011957610088565b806310814c371461008d578063245a7bfc146100b157806331b46c8b146100b957806338d52e0f146100d3575b600080fd5b610095610158565b604080516001600160a01b039092168252519081900360200190f35b610095610167565b6100c1610176565b60408051918252519081900360200190f35b61009561017c565b61009561018b565b6100c161019a565b6101176004803603604081101561010157600080fd5b50803590602001356001600160501b031661026a565b005b61013f6004803603602081101561012f57600080fd5b50356001600160501b0316610571565b6040805192835260208301919091528051918290030190f35b6004546001600160a01b031681565b6002546001600160a01b031681565b60005481565b6003546001600160a01b031681565b6001546001600160a01b031681565b600080600260009054906101000a90046001600160a01b03166001600160a01b031663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156101eb57600080fd5b505afa1580156101ff573d6000803e3d6000fd5b505050506040513d60a081101561021557600080fd5b506020015190506000811361025b5760405162461bcd60e51b815260040180806020018281038252602681526020018061087b6026913960400191505060405180910390fd5b61026481610619565b91505090565b60025460408051639a6fc8f560e01b81526001600160501b0384166004820152905160009283926001600160a01b0390911691639a6fc8f59160248082019260a092909190829003018186803b1580156102c357600080fd5b505afa1580156102d7573d6000803e3d6000fd5b505050506040513d60a08110156102ed57600080fd5b50602081015160609091015190925090508084111561033d5760405162461bcd60e51b815260040180806020018281038252602f8152602001806108c2602f913960400191505060405180910390fd5b6000821215610393576040805162461bcd60e51b815260206004820152601e60248201527f436861696e4c696e6b5072696365723a20696e76616c69642070726963650000604482015290519081900360640190fd5b6004546001600160a01b031633146104f4576000806103c26001600160501b038616600163ffffffff61069816565b90505b816104f15760025460408051639a6fc8f560e01b81526001600160501b038416600482015290516000926001600160a01b031691639a6fc8f59160248083019260a0929190829003018186803b15801561041e57600080fd5b505afa158015610432573d6000803e3d6000fd5b505050506040513d60a081101561044857600080fd5b50606001519050806104a7576000826001600160501b03161161049c5760405162461bcd60e51b81526004018080602001828103825260288152602001806109286028913960400191505060405180910390fd5b6001820391506104eb565b868111156104e65760405162461bcd60e51b81526004018080602001828103825260378152602001806108f16037913960400191505060405180910390fd5b600192505b506103c5565b50505b6001546003546040805163ee53140960e01b81526001600160a01b03928316600482015260248101889052604481018690529051919092169163ee53140991606480830192600092919082900301818387803b15801561055357600080fd5b505af1158015610567573d6000803e3d6000fd5b5050505050505050565b60025460408051639a6fc8f560e01b81526001600160501b038416600482015290516000928392839283926001600160a01b031691639a6fc8f59160248083019260a0929190829003018186803b1580156105cb57600080fd5b505afa1580156105df573d6000803e3d6000fd5b505050506040513d60a08110156105f557600080fd5b506020810151606090910151909250905061060f82610619565b9350915050915091565b600060086000541115610659576000805461063b90600863ffffffff61069816565b905061065183600a83900a63ffffffff6106e316565b925050610694565b60086000541015610694576000805461067a9060089063ffffffff61069816565b905061069083600a83900a63ffffffff61072516565b9250505b5090565b60006106da83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061077e565b90505b92915050565b60006106da83836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f000000000000815250610815565b600082610734575060006106dd565b8282028284828161074157fe5b04146106da5760405162461bcd60e51b81526004018080602001828103825260218152602001806108a16021913960400191505060405180910390fd5b6000818484111561080d5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b838110156107d25781810151838201526020016107ba565b50505050905090810190601f1680156107ff5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b600081836108645760405162461bcd60e51b81526020600482018181528351602484015283519092839260449091019190850190808383600083156107d25781810151838201526020016107ba565b50600083858161087057fe5b049594505050505056fe436861696e4c696e6b5072696365723a207072696365206973206c6f776572207468616e2030536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77436861696e4c696e6b5072696365723a20726f756e644964206e6f7420666972737420616674657220657870697279436861696e4c696e6b5072696365723a2070726576696f7573526f756e644964206e6f74206c617374206265666f726520657870697279436861696e4c696e6b5072696365723a20496e76616c69642070726576696f7573526f756e644964a264697066735822122034f23be5d1a00c4d4fc4772ab51514bb72322a731317a786135bba5b2afcb65e64736f6c634300060a0033436861696e4c696e6b5072696365723a2043616e6e6f742073657420302061646472657373206173206f7261636c65436861696e4c696e6b5072696365723a2043616e6e6f7420736574203020616464726573732061732061676772656761746f72436861696e4c696e6b5072696365723a2043616e6e6f74207365742030206164647265737320617320626f74",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c80637dc0d1d01161005b5780637dc0d1d0146100db57806398d5fdca146100e3578063b2b63d9f146100eb578063eec377c01461011957610088565b806310814c371461008d578063245a7bfc146100b157806331b46c8b146100b957806338d52e0f146100d3575b600080fd5b610095610158565b604080516001600160a01b039092168252519081900360200190f35b610095610167565b6100c1610176565b60408051918252519081900360200190f35b61009561017c565b61009561018b565b6100c161019a565b6101176004803603604081101561010157600080fd5b50803590602001356001600160501b031661026a565b005b61013f6004803603602081101561012f57600080fd5b50356001600160501b0316610571565b6040805192835260208301919091528051918290030190f35b6004546001600160a01b031681565b6002546001600160a01b031681565b60005481565b6003546001600160a01b031681565b6001546001600160a01b031681565b600080600260009054906101000a90046001600160a01b03166001600160a01b031663feaf968c6040518163ffffffff1660e01b815260040160a06040518083038186803b1580156101eb57600080fd5b505afa1580156101ff573d6000803e3d6000fd5b505050506040513d60a081101561021557600080fd5b506020015190506000811361025b5760405162461bcd60e51b815260040180806020018281038252602681526020018061087b6026913960400191505060405180910390fd5b61026481610619565b91505090565b60025460408051639a6fc8f560e01b81526001600160501b0384166004820152905160009283926001600160a01b0390911691639a6fc8f59160248082019260a092909190829003018186803b1580156102c357600080fd5b505afa1580156102d7573d6000803e3d6000fd5b505050506040513d60a08110156102ed57600080fd5b50602081015160609091015190925090508084111561033d5760405162461bcd60e51b815260040180806020018281038252602f8152602001806108c2602f913960400191505060405180910390fd5b6000821215610393576040805162461bcd60e51b815260206004820152601e60248201527f436861696e4c696e6b5072696365723a20696e76616c69642070726963650000604482015290519081900360640190fd5b6004546001600160a01b031633146104f4576000806103c26001600160501b038616600163ffffffff61069816565b90505b816104f15760025460408051639a6fc8f560e01b81526001600160501b038416600482015290516000926001600160a01b031691639a6fc8f59160248083019260a0929190829003018186803b15801561041e57600080fd5b505afa158015610432573d6000803e3d6000fd5b505050506040513d60a081101561044857600080fd5b50606001519050806104a7576000826001600160501b03161161049c5760405162461bcd60e51b81526004018080602001828103825260288152602001806109286028913960400191505060405180910390fd5b6001820391506104eb565b868111156104e65760405162461bcd60e51b81526004018080602001828103825260378152602001806108f16037913960400191505060405180910390fd5b600192505b506103c5565b50505b6001546003546040805163ee53140960e01b81526001600160a01b03928316600482015260248101889052604481018690529051919092169163ee53140991606480830192600092919082900301818387803b15801561055357600080fd5b505af1158015610567573d6000803e3d6000fd5b5050505050505050565b60025460408051639a6fc8f560e01b81526001600160501b038416600482015290516000928392839283926001600160a01b031691639a6fc8f59160248083019260a0929190829003018186803b1580156105cb57600080fd5b505afa1580156105df573d6000803e3d6000fd5b505050506040513d60a08110156105f557600080fd5b506020810151606090910151909250905061060f82610619565b9350915050915091565b600060086000541115610659576000805461063b90600863ffffffff61069816565b905061065183600a83900a63ffffffff6106e316565b925050610694565b60086000541015610694576000805461067a9060089063ffffffff61069816565b905061069083600a83900a63ffffffff61072516565b9250505b5090565b60006106da83836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f77000081525061077e565b90505b92915050565b60006106da83836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f000000000000815250610815565b600082610734575060006106dd565b8282028284828161074157fe5b04146106da5760405162461bcd60e51b81526004018080602001828103825260218152602001806108a16021913960400191505060405180910390fd5b6000818484111561080d5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b838110156107d25781810151838201526020016107ba565b50505050905090810190601f1680156107ff5780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b505050900390565b600081836108645760405162461bcd60e51b81526020600482018181528351602484015283519092839260449091019190850190808383600083156107d25781810151838201526020016107ba565b50600083858161087057fe5b049594505050505056fe436861696e4c696e6b5072696365723a207072696365206973206c6f776572207468616e2030536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f77436861696e4c696e6b5072696365723a20726f756e644964206e6f7420666972737420616674657220657870697279436861696e4c696e6b5072696365723a2070726576696f7573526f756e644964206e6f74206c617374206265666f726520657870697279436861696e4c696e6b5072696365723a20496e76616c69642070726576696f7573526f756e644964a264697066735822122034f23be5d1a00c4d4fc4772ab51514bb72322a731317a786135bba5b2afcb65e64736f6c634300060a0033",
+  "devdoc": {
+    "methods": {
+      "constructor": {
+        "params": {
+          "_aggregator": "Chainlink aggregator contract for the asset",
+          "_asset": "asset that this pricer will get a price for",
+          "_bot": "priveleged address that can call setExpiryPriceInOracle",
+          "_oracle": "Opyn Oracle address"
+        }
+      },
+      "getHistoricalPrice(uint80)": {
+        "params": {
+          "_roundId": "chainlink round id"
+        },
+        "returns": {
+          "_0": "round price and timestamp"
+        }
+      },
+      "getPrice()": {
+        "details": "overides the getPrice function in OpynPricerInterface",
+        "returns": {
+          "_0": "price of the asset in USD, scaled by 1e8"
+        }
+      },
+      "setExpiryPriceInOracle(uint256,uint80)": {
+        "details": "a roundId must be provided to confirm price validity, which is the first Chainlink price provided after the expiryTimestamp",
+        "params": {
+          "_expiryTimestamp": "expiry to set a price for",
+          "_roundId": "the first roundId after expiryTimestamp"
+        }
+      }
+    },
+    "stateVariables": {
+      "BASE": {
+        "details": "base decimals"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "aggregator()": {
+        "notice": "the aggregator for an asset"
+      },
+      "aggregatorDecimals()": {
+        "notice": "chainlink response decimals"
+      },
+      "asset()": {
+        "notice": "asset that this pricer will a get price for"
+      },
+      "bot()": {
+        "notice": "bot address that is allowed to call setExpiryPriceInOracle"
+      },
+      "getHistoricalPrice(uint80)": {
+        "notice": "get historical chainlink price"
+      },
+      "getPrice()": {
+        "notice": "get the live price for the asset"
+      },
+      "oracle()": {
+        "notice": "the opyn oracle address"
+      },
+      "setExpiryPriceInOracle(uint256,uint80)": {
+        "notice": "set the expiry price in the oracle, can only be called by Bot address"
+      }
+    },
+    "notice": "A Pricer contract for one asset as reported by Chainlink"
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 16454,
+        "contract": "contracts/pricers/ChainlinkPricer.sol:ChainlinkPricer",
+        "label": "aggregatorDecimals",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 16457,
+        "contract": "contracts/pricers/ChainlinkPricer.sol:ChainlinkPricer",
+        "label": "oracle",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_contract(OracleInterface)9641"
+      },
+      {
+        "astId": 16460,
+        "contract": "contracts/pricers/ChainlinkPricer.sol:ChainlinkPricer",
+        "label": "aggregator",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_contract(AggregatorInterface)9272"
+      },
+      {
+        "astId": 16463,
+        "contract": "contracts/pricers/ChainlinkPricer.sol:ChainlinkPricer",
+        "label": "asset",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_address"
+      },
+      {
+        "astId": 16466,
+        "contract": "contracts/pricers/ChainlinkPricer.sol:ChainlinkPricer",
+        "label": "bot",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(AggregatorInterface)9272": {
+        "encoding": "inplace",
+        "label": "contract AggregatorInterface",
+        "numberOfBytes": "20"
+      },
+      "t_contract(OracleInterface)9641": {
+        "encoding": "inplace",
+        "label": "contract OracleInterface",
+        "numberOfBytes": "20"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
