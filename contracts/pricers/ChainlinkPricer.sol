@@ -9,7 +9,7 @@ import {SafeMath} from "../packages/oz/SafeMath.sol";
 /**
  * @notice A Pricer contract for one asset as reported by Chainlink
  */
-contract ChainLinkPricer is OpynPricerInterface {
+contract ChainlinkPricer is OpynPricerInterface {
     using SafeMath for uint256;
 
     /// @dev base decimals
