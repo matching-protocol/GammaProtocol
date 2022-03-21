@@ -1,0 +1,646 @@
+{
+  "address": "0xe6a0199CE6bedEa133B62461840852e42C4Bf6dB",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "add",
+          "type": "address"
+        }
+      ],
+      "name": "AddressAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "proxy",
+          "type": "address"
+        }
+      ],
+      "name": "ProxyCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getController",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLiquidationManager",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMarginCalculator",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMarginPool",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getOracle",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getOtokenFactory",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getOtokenImpl",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getWhitelist",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_key",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "setAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_controller",
+          "type": "address"
+        }
+      ],
+      "name": "setController",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_liquidationManager",
+          "type": "address"
+        }
+      ],
+      "name": "setLiquidationManager",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_marginCalculator",
+          "type": "address"
+        }
+      ],
+      "name": "setMarginCalculator",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_marginPool",
+          "type": "address"
+        }
+      ],
+      "name": "setMarginPool",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_oracle",
+          "type": "address"
+        }
+      ],
+      "name": "setOracle",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_otokenFactory",
+          "type": "address"
+        }
+      ],
+      "name": "setOtokenFactory",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_otokenImpl",
+          "type": "address"
+        }
+      ],
+      "name": "setOtokenImpl",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_whitelist",
+          "type": "address"
+        }
+      ],
+      "name": "setWhitelist",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_id",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "_newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "updateImpl",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x6722681bd4fbb23702bc5c5a3340d97a9f47aa1ae1cbfab5479a29e6df43618a",
+  "receipt": {
+    "to": null,
+    "from": "0x3F57a38577F92adC561D8f4504832dCc34000f11",
+    "contractAddress": "0xe6a0199CE6bedEa133B62461840852e42C4Bf6dB",
+    "transactionIndex": 17,
+    "gasUsed": "1156151",
+    "logsBloom": "0x00100000000000000000000000000000000000000000000000800000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000020000000000000000000800000000000000000000000000000000400000000000000000000000000000000000000000000000800001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000040000000",
+    "blockHash": "0x94f2fd80e3091748bc7426e20b082ece19d2cc029463a500ff4a421547ec1ac0",
+    "transactionHash": "0x6722681bd4fbb23702bc5c5a3340d97a9f47aa1ae1cbfab5479a29e6df43618a",
+    "logs": [
+      {
+        "transactionIndex": 17,
+        "blockNumber": 12396210,
+        "transactionHash": "0x6722681bd4fbb23702bc5c5a3340d97a9f47aa1ae1cbfab5479a29e6df43618a",
+        "address": "0xe6a0199CE6bedEa133B62461840852e42C4Bf6dB",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000003f57a38577f92adc561d8f4504832dcc34000f11"
+        ],
+        "data": "0x",
+        "logIndex": 95,
+        "blockHash": "0x94f2fd80e3091748bc7426e20b082ece19d2cc029463a500ff4a421547ec1ac0"
+      }
+    ],
+    "blockNumber": 12396210,
+    "cumulativeGasUsed": "4306921",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "acd71413d86f7465252641f7fa8c1f03",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.10+commit.00c0fcaf\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"add\",\"type\":\"address\"}],\"name\":\"AddressAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"proxy\",\"type\":\"address\"}],\"name\":\"ProxyCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_key\",\"type\":\"bytes32\"}],\"name\":\"getAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getController\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLiquidationManager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMarginCalculator\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMarginPool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getOracle\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getOtokenFactory\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getOtokenImpl\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getWhitelist\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_key\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"setAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_controller\",\"type\":\"address\"}],\"name\":\"setController\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_liquidationManager\",\"type\":\"address\"}],\"name\":\"setLiquidationManager\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_marginCalculator\",\"type\":\"address\"}],\"name\":\"setMarginCalculator\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_marginPool\",\"type\":\"address\"}],\"name\":\"setMarginPool\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_oracle\",\"type\":\"address\"}],\"name\":\"setOracle\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_otokenFactory\",\"type\":\"address\"}],\"name\":\"setOtokenFactory\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_otokenImpl\",\"type\":\"address\"}],\"name\":\"setOtokenImpl\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_whitelist\",\"type\":\"address\"}],\"name\":\"setWhitelist\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"_newAddress\",\"type\":\"address\"}],\"name\":\"updateImpl\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Opyn Team\",\"methods\":{\"getAddress(bytes32)\":{\"params\":{\"_key\":\"key address\"},\"returns\":{\"_0\":\"address\"}},\"getController()\":{\"returns\":{\"_0\":\"Controller address\"}},\"getLiquidationManager()\":{\"returns\":{\"_0\":\"LiquidationManager address\"}},\"getMarginCalculator()\":{\"returns\":{\"_0\":\"MarginCalculator address\"}},\"getMarginPool()\":{\"returns\":{\"_0\":\"MarginPool address\"}},\"getOracle()\":{\"returns\":{\"_0\":\"Oracle address\"}},\"getOtokenFactory()\":{\"returns\":{\"_0\":\"OtokenFactory address\"}},\"getOtokenImpl()\":{\"returns\":{\"_0\":\"Otoken implementation address\"}},\"getWhitelist()\":{\"returns\":{\"_0\":\"Whitelist address\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setAddress(bytes32,address)\":{\"details\":\"can only be called by the addressbook owner\",\"params\":{\"_address\":\"address\",\"_key\":\"key\"}},\"setController(address)\":{\"details\":\"can only be called by the addressbook owner\",\"params\":{\"_controller\":\"Controller address\"}},\"setLiquidationManager(address)\":{\"details\":\"can only be called by the addressbook owner\",\"params\":{\"_liquidationManager\":\"LiquidationManager address\"}},\"setMarginCalculator(address)\":{\"details\":\"can only be called by the addressbook owner\",\"params\":{\"_marginCalculator\":\"MarginCalculator address\"}},\"setMarginPool(address)\":{\"details\":\"can only be called by the addressbook owner\",\"params\":{\"_marginPool\":\"MarginPool address\"}},\"setOracle(address)\":{\"details\":\"can only be called by the addressbook owner\",\"params\":{\"_oracle\":\"Oracle address\"}},\"setOtokenFactory(address)\":{\"details\":\"can only be called by the addressbook owner\",\"params\":{\"_otokenFactory\":\"OtokenFactory address\"}},\"setOtokenImpl(address)\":{\"details\":\"can only be called by the addressbook owner\",\"params\":{\"_otokenImpl\":\"Otoken implementation address\"}},\"setWhitelist(address)\":{\"details\":\"can only be called by the addressbook owner\",\"params\":{\"_whitelist\":\"Whitelist address\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"},\"updateImpl(bytes32,address)\":{\"details\":\"function to update the implementation of a specific component of the protocol\",\"params\":{\"_id\":\"id of the contract to be updated\",\"_newAddress\":\"address of the new implementation*\"}}},\"stateVariables\":{\"CONTROLLER\":{\"details\":\"Controller key\"},\"LIQUIDATION_MANAGER\":{\"details\":\"LiquidationManager key\"},\"MARGIN_CALCULATOR\":{\"details\":\"MarginCalculator key\"},\"MARGIN_POOL\":{\"details\":\"MarginPool key\"},\"ORACLE\":{\"details\":\"Oracle key\"},\"OTOKEN_FACTORY\":{\"details\":\"OtokenFactory key\"},\"OTOKEN_IMPL\":{\"details\":\"Otoken implementation key\"},\"WHITELIST\":{\"details\":\"Whitelist key\"},\"addresses\":{\"details\":\"mapping between key and address\"}},\"title\":\"AddressBook Module\"},\"userdoc\":{\"methods\":{\"getAddress(bytes32)\":{\"notice\":\"return an address for specific key\"},\"getController()\":{\"notice\":\"return Controller address\"},\"getLiquidationManager()\":{\"notice\":\"return LiquidationManager address\"},\"getMarginCalculator()\":{\"notice\":\"return MarginCalculator address\"},\"getMarginPool()\":{\"notice\":\"return MarginPool address\"},\"getOracle()\":{\"notice\":\"return Oracle address\"},\"getOtokenFactory()\":{\"notice\":\"return oTokenFactory address\"},\"getOtokenImpl()\":{\"notice\":\"return Otoken implementation address\"},\"getWhitelist()\":{\"notice\":\"return Whitelist address\"},\"setAddress(bytes32,address)\":{\"notice\":\"set a specific address for a specific key\"},\"setController(address)\":{\"notice\":\"set Controller address\"},\"setLiquidationManager(address)\":{\"notice\":\"set LiquidationManager address\"},\"setMarginCalculator(address)\":{\"notice\":\"set MarginCalculator address\"},\"setMarginPool(address)\":{\"notice\":\"set MarginPool address\"},\"setOracle(address)\":{\"notice\":\"set Oracle address\"},\"setOtokenFactory(address)\":{\"notice\":\"set OtokenFactory address\"},\"setOtokenImpl(address)\":{\"notice\":\"set Otoken implementation address\"},\"setWhitelist(address)\":{\"notice\":\"set Whitelist address\"}}}},\"settings\":{\"compilationTarget\":{\"contracts/core/AddressBook.sol\":\"AddressBook\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/core/AddressBook.sol\":{\"content\":\"/**\\n * SPDX-License-Identifier: UNLICENSED\\n */\\npragma solidity =0.6.10;\\n\\nimport {Ownable} from \\\"../packages/oz/Ownable.sol\\\";\\nimport {OwnedUpgradeabilityProxy} from \\\"../packages/oz/upgradeability/OwnedUpgradeabilityProxy.sol\\\";\\n\\n/**\\n * @author Opyn Team\\n * @title AddressBook Module\\n */\\ncontract AddressBook is Ownable {\\n    /// @dev Otoken implementation key\\n    bytes32 private constant OTOKEN_IMPL = keccak256(\\\"OTOKEN_IMPL\\\");\\n    /// @dev OtokenFactory key\\n    bytes32 private constant OTOKEN_FACTORY = keccak256(\\\"OTOKEN_FACTORY\\\");\\n    /// @dev Whitelist key\\n    bytes32 private constant WHITELIST = keccak256(\\\"WHITELIST\\\");\\n    /// @dev Controller key\\n    bytes32 private constant CONTROLLER = keccak256(\\\"CONTROLLER\\\");\\n    /// @dev MarginPool key\\n    bytes32 private constant MARGIN_POOL = keccak256(\\\"MARGIN_POOL\\\");\\n    /// @dev MarginCalculator key\\n    bytes32 private constant MARGIN_CALCULATOR = keccak256(\\\"MARGIN_CALCULATOR\\\");\\n    /// @dev LiquidationManager key\\n    bytes32 private constant LIQUIDATION_MANAGER = keccak256(\\\"LIQUIDATION_MANAGER\\\");\\n    /// @dev Oracle key\\n    bytes32 private constant ORACLE = keccak256(\\\"ORACLE\\\");\\n\\n    /// @dev mapping between key and address\\n    mapping(bytes32 => address) private addresses;\\n\\n    /// @notice emits an event when a new proxy is created\\n    event ProxyCreated(bytes32 indexed id, address indexed proxy);\\n    /// @notice emits an event when a new address is added\\n    event AddressAdded(bytes32 indexed id, address indexed add);\\n\\n    /**\\n     * @notice return Otoken implementation address\\n     * @return Otoken implementation address\\n     */\\n    function getOtokenImpl() external view returns (address) {\\n        return getAddress(OTOKEN_IMPL);\\n    }\\n\\n    /**\\n     * @notice return oTokenFactory address\\n     * @return OtokenFactory address\\n     */\\n    function getOtokenFactory() external view returns (address) {\\n        return getAddress(OTOKEN_FACTORY);\\n    }\\n\\n    /**\\n     * @notice return Whitelist address\\n     * @return Whitelist address\\n     */\\n    function getWhitelist() external view returns (address) {\\n        return getAddress(WHITELIST);\\n    }\\n\\n    /**\\n     * @notice return Controller address\\n     * @return Controller address\\n     */\\n    function getController() external view returns (address) {\\n        return getAddress(CONTROLLER);\\n    }\\n\\n    /**\\n     * @notice return MarginPool address\\n     * @return MarginPool address\\n     */\\n    function getMarginPool() external view returns (address) {\\n        return getAddress(MARGIN_POOL);\\n    }\\n\\n    /**\\n     * @notice return MarginCalculator address\\n     * @return MarginCalculator address\\n     */\\n    function getMarginCalculator() external view returns (address) {\\n        return getAddress(MARGIN_CALCULATOR);\\n    }\\n\\n    /**\\n     * @notice return LiquidationManager address\\n     * @return LiquidationManager address\\n     */\\n    function getLiquidationManager() external view returns (address) {\\n        return getAddress(LIQUIDATION_MANAGER);\\n    }\\n\\n    /**\\n     * @notice return Oracle address\\n     * @return Oracle address\\n     */\\n    function getOracle() external view returns (address) {\\n        return getAddress(ORACLE);\\n    }\\n\\n    /**\\n     * @notice set Otoken implementation address\\n     * @dev can only be called by the addressbook owner\\n     * @param _otokenImpl Otoken implementation address\\n     */\\n    function setOtokenImpl(address _otokenImpl) external onlyOwner {\\n        setAddress(OTOKEN_IMPL, _otokenImpl);\\n    }\\n\\n    /**\\n     * @notice set OtokenFactory address\\n     * @dev can only be called by the addressbook owner\\n     * @param _otokenFactory OtokenFactory address\\n     */\\n    function setOtokenFactory(address _otokenFactory) external onlyOwner {\\n        setAddress(OTOKEN_FACTORY, _otokenFactory);\\n    }\\n\\n    /**\\n     * @notice set Whitelist address\\n     * @dev can only be called by the addressbook owner\\n     * @param _whitelist Whitelist address\\n     */\\n    function setWhitelist(address _whitelist) external onlyOwner {\\n        setAddress(WHITELIST, _whitelist);\\n    }\\n\\n    /**\\n     * @notice set Controller address\\n     * @dev can only be called by the addressbook owner\\n     * @param _controller Controller address\\n     */\\n    function setController(address _controller) external onlyOwner {\\n        updateImpl(CONTROLLER, _controller);\\n    }\\n\\n    /**\\n     * @notice set MarginPool address\\n     * @dev can only be called by the addressbook owner\\n     * @param _marginPool MarginPool address\\n     */\\n    function setMarginPool(address _marginPool) external onlyOwner {\\n        setAddress(MARGIN_POOL, _marginPool);\\n    }\\n\\n    /**\\n     * @notice set MarginCalculator address\\n     * @dev can only be called by the addressbook owner\\n     * @param _marginCalculator MarginCalculator address\\n     */\\n    function setMarginCalculator(address _marginCalculator) external onlyOwner {\\n        setAddress(MARGIN_CALCULATOR, _marginCalculator);\\n    }\\n\\n    /**\\n     * @notice set LiquidationManager address\\n     * @dev can only be called by the addressbook owner\\n     * @param _liquidationManager LiquidationManager address\\n     */\\n    function setLiquidationManager(address _liquidationManager) external onlyOwner {\\n        setAddress(LIQUIDATION_MANAGER, _liquidationManager);\\n    }\\n\\n    /**\\n     * @notice set Oracle address\\n     * @dev can only be called by the addressbook owner\\n     * @param _oracle Oracle address\\n     */\\n    function setOracle(address _oracle) external onlyOwner {\\n        setAddress(ORACLE, _oracle);\\n    }\\n\\n    /**\\n     * @notice return an address for specific key\\n     * @param _key key address\\n     * @return address\\n     */\\n    function getAddress(bytes32 _key) public view returns (address) {\\n        return addresses[_key];\\n    }\\n\\n    /**\\n     * @notice set a specific address for a specific key\\n     * @dev can only be called by the addressbook owner\\n     * @param _key key\\n     * @param _address address\\n     */\\n    function setAddress(bytes32 _key, address _address) public onlyOwner {\\n        addresses[_key] = _address;\\n\\n        emit AddressAdded(_key, _address);\\n    }\\n\\n    /**\\n     * @dev function to update the implementation of a specific component of the protocol\\n     * @param _id id of the contract to be updated\\n     * @param _newAddress address of the new implementation\\n     **/\\n    function updateImpl(bytes32 _id, address _newAddress) public onlyOwner {\\n        address payable proxyAddress = address(uint160(getAddress(_id)));\\n\\n        if (proxyAddress == address(0)) {\\n            bytes memory params = abi.encodeWithSignature(\\\"initialize(address,address)\\\", address(this), owner());\\n            OwnedUpgradeabilityProxy proxy = new OwnedUpgradeabilityProxy();\\n            setAddress(_id, address(proxy));\\n            emit ProxyCreated(_id, address(proxy));\\n            proxy.upgradeToAndCall(_newAddress, params);\\n        } else {\\n            OwnedUpgradeabilityProxy proxy = OwnedUpgradeabilityProxy(proxyAddress);\\n            proxy.upgradeTo(_newAddress);\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x3e8f90db8b7a745d4878a6747d4a6815d485e31132771a5e163ff51e5e9f6491\",\"license\":\"UNLICENSED\"},\"contracts/packages/oz/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// openzeppelin-contracts v3.1.0\\n\\npragma solidity 0.6.10;\\n\\n/*\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with GSN meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address payable) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes memory) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0x35b3e8e1595be9615789db07354d46bf44adf46be977b76a467ad9edc092e950\",\"license\":\"MIT\"},\"contracts/packages/oz/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// openzeppelin-contracts v3.1.0\\n\\npragma solidity 0.6.10;\\n\\nimport \\\"./Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\ncontract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor() internal {\\n        address msgSender = _msgSender();\\n        _owner = msgSender;\\n        emit OwnershipTransferred(address(0), msgSender);\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(_owner == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        emit OwnershipTransferred(_owner, address(0));\\n        _owner = address(0);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        emit OwnershipTransferred(_owner, newOwner);\\n        _owner = newOwner;\\n    }\\n}\\n\",\"keccak256\":\"0xb6d430bc79061b7e7115f305f00c7d65e52d0cc9357eb5a9c88d4aa6fa643ec5\",\"license\":\"MIT\"},\"contracts/packages/oz/upgradeability/OwnedUpgradeabilityProxy.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\n// openzeppelin-contracts-upgradeable v3.0.0\\n\\npragma solidity 0.6.10;\\n\\nimport \\\"./UpgradeabilityProxy.sol\\\";\\n\\n/**\\n * @title OwnedUpgradeabilityProxy\\n * @dev This contract combines an upgradeability proxy with basic authorization control functionalities\\n */\\ncontract OwnedUpgradeabilityProxy is UpgradeabilityProxy {\\n    /**\\n     * @dev Event to show ownership has been transferred\\n     * @param previousOwner representing the address of the previous owner\\n     * @param newOwner representing the address of the new owner\\n     */\\n    event ProxyOwnershipTransferred(address previousOwner, address newOwner);\\n\\n    /// @dev Storage position of the owner of the contract\\n    bytes32 private constant proxyOwnerPosition = keccak256(\\\"org.zeppelinos.proxy.owner\\\");\\n\\n    /**\\n     * @dev the constructor sets the original owner of the contract to the sender account.\\n     */\\n    constructor() public {\\n        setUpgradeabilityOwner(msg.sender);\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyProxyOwner() {\\n        require(msg.sender == proxyOwner());\\n        _;\\n    }\\n\\n    /**\\n     * @dev Tells the address of the owner\\n     * @return owner the address of the owner\\n     */\\n    function proxyOwner() public view returns (address owner) {\\n        bytes32 position = proxyOwnerPosition;\\n        assembly {\\n            owner := sload(position)\\n        }\\n    }\\n\\n    /**\\n     * @dev Sets the address of the owner\\n     * @param _newProxyOwner address of new proxy owner\\n     */\\n    function setUpgradeabilityOwner(address _newProxyOwner) internal {\\n        bytes32 position = proxyOwnerPosition;\\n        assembly {\\n            sstore(position, _newProxyOwner)\\n        }\\n    }\\n\\n    /**\\n     * @dev Allows the current owner to transfer control of the contract to a newOwner.\\n     * @param _newOwner The address to transfer ownership to.\\n     */\\n    function transferProxyOwnership(address _newOwner) public onlyProxyOwner {\\n        require(_newOwner != address(0));\\n        emit ProxyOwnershipTransferred(proxyOwner(), _newOwner);\\n        setUpgradeabilityOwner(_newOwner);\\n    }\\n\\n    /**\\n     * @dev Allows the proxy owner to upgrade the current version of the proxy.\\n     * @param _implementation representing the address of the new implementation to be set.\\n     */\\n    function upgradeTo(address _implementation) public onlyProxyOwner {\\n        _upgradeTo(_implementation);\\n    }\\n\\n    /**\\n     * @dev Allows the proxy owner to upgrade the current version of the proxy and call the new implementation\\n     * to initialize whatever is needed through a low level call.\\n     * @param _implementation representing the address of the new implementation to be set.\\n     * @param _data represents the msg.data to bet sent in the low level call. This parameter may include the function\\n     * signature of the implementation to be called with the needed payload\\n     */\\n    function upgradeToAndCall(address _implementation, bytes calldata _data) public payable onlyProxyOwner {\\n        upgradeTo(_implementation);\\n        (bool success, ) = address(this).call{value: msg.value}(_data);\\n        require(success);\\n    }\\n}\\n\",\"keccak256\":\"0x1f32caffdf76f9ddf1848d394e63dfafb7d5327df56b645e08666b07f3797a44\",\"license\":\"UNLICENSED\"},\"contracts/packages/oz/upgradeability/Proxy.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\n// openzeppelin-contracts-upgradeable v3.0.0\\n\\npragma solidity 0.6.10;\\n\\n/**\\n * @title Proxy\\n * @dev Gives the possibility to delegate any call to a foreign implementation.\\n */\\nabstract contract Proxy {\\n    /**\\n     * @dev Tells the address of the implementation where every call will be delegated.\\n     * @return address of the implementation to which it will be delegated\\n     */\\n    function implementation() public view virtual returns (address);\\n\\n    /**\\n     * @dev Fallback function allowing to perform a delegatecall to the given implementation.\\n     * This function will return whatever the implementation call returns\\n     */\\n    fallback() external payable {\\n        address _impl = implementation();\\n        require(_impl != address(0));\\n\\n        assembly {\\n            let ptr := mload(0x40)\\n            calldatacopy(ptr, 0, calldatasize())\\n            let result := delegatecall(gas(), _impl, ptr, calldatasize(), 0, 0)\\n            let size := returndatasize()\\n            returndatacopy(ptr, 0, size)\\n\\n            switch result\\n            case 0 {\\n                revert(ptr, size)\\n            }\\n            default {\\n                return(ptr, size)\\n            }\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x90f189968a3dece9fea91aec114ba65748fcb3baec2da20bf6e70a4fda78f416\",\"license\":\"UNLICENSED\"},\"contracts/packages/oz/upgradeability/UpgradeabilityProxy.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\n// openzeppelin-contracts-upgradeable v3.0.0\\n\\npragma solidity 0.6.10;\\n\\nimport \\\"./Proxy.sol\\\";\\n\\n/**\\n * @title UpgradeabilityProxy\\n * @dev This contract represents a proxy where the implementation address to which it will delegate can be upgraded\\n */\\ncontract UpgradeabilityProxy is Proxy {\\n    /**\\n     * @dev This event will be emitted every time the implementation gets upgraded\\n     * @param implementation representing the address of the upgraded implementation\\n     */\\n    event Upgraded(address indexed implementation);\\n\\n    /// @dev Storage position of the address of the current implementation\\n    bytes32 private constant implementationPosition = keccak256(\\\"org.zeppelinos.proxy.implementation\\\");\\n\\n    /**\\n     * @dev Tells the address of the current implementation\\n     * @return impl address of the current implementation\\n     */\\n    function implementation() public view override returns (address impl) {\\n        bytes32 position = implementationPosition;\\n        assembly {\\n            impl := sload(position)\\n        }\\n    }\\n\\n    /**\\n     * @dev Sets the address of the current implementation\\n     * @param _newImplementation address representing the new implementation to be set\\n     */\\n    function setImplementation(address _newImplementation) internal {\\n        bytes32 position = implementationPosition;\\n        assembly {\\n            sstore(position, _newImplementation)\\n        }\\n    }\\n\\n    /**\\n     * @dev Upgrades the implementation address\\n     * @param _newImplementation representing the address of the new implementation to be set\\n     */\\n    function _upgradeTo(address _newImplementation) internal {\\n        address currentImplementation = implementation();\\n        require(currentImplementation != _newImplementation);\\n        setImplementation(_newImplementation);\\n        emit Upgraded(_newImplementation);\\n    }\\n}\\n\",\"keccak256\":\"0x762536e1e1f155354c34d4a227195c0cfdc77742e371aaa5b061e79a7b863401\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060006100246001600160e01b0361007316565b600080546001600160a01b0319166001600160a01b0383169081178255604051929350917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a350610077565b3390565b611380806100866000396000f3fe608060405234801561001057600080fd5b50600436106101425760003560e01c806392eefe9b116100b8578063d01f63f51161007c578063d01f63f5146102d8578063d94f323e146102e0578063e7cf784114610306578063e9f2e8be1461032c578063ee8a463214610352578063f2fde38b1461035a57610142565b806392eefe9b14610250578063a8de41d514610276578063b508ac991461027e578063ca446dd9146102a4578063cf28493f146102d057610142565b8063715018a61161010a578063715018a6146101e457806375486342146101ec5780637adbf973146101f4578063833b1fce1461021a578063854cff2f146102225780638da5cb5b1461024857610142565b80631ffaf0db1461014757806321f8a7211461016b5780632b6bfeaa146101885780633018205f146101b657806338f92fc7146101be575b600080fd5b61014f610380565b604080516001600160a01b039092168252519081900360200190f35b61014f6004803603602081101561018157600080fd5b50356103b4565b6101b46004803603604081101561019e57600080fd5b50803590602001356001600160a01b03166103cf565b005b61014f610646565b6101b4600480360360208110156101d457600080fd5b50356001600160a01b0316610671565b6101b46106fe565b61014f6107a0565b6101b46004803603602081101561020a57600080fd5b50356001600160a01b03166107cc565b61014f610849565b6101b46004803603602081101561023857600080fd5b50356001600160a01b0316610870565b61014f6108f0565b6101b46004803603602081101561026657600080fd5b50356001600160a01b03166108ff565b61014f610980565b6101b46004803603602081101561029457600080fd5b50356001600160a01b03166109ac565b6101b4600480360360408110156102ba57600080fd5b50803590602001356001600160a01b0316610a2a565b61014f610adb565b61014f610b0d565b6101b4600480360360208110156102f657600080fd5b50356001600160a01b0316610b37565b6101b46004803603602081101561031c57600080fd5b50356001600160a01b0316610bbc565b6101b46004803603602081101561034257600080fd5b50356001600160a01b0316610c3e565b61014f610cc6565b6101b46004803603602081101561037057600080fd5b50356001600160a01b0316610cfa565b604080516d4f544f4b454e5f464143544f525960901b8152905190819003600e0190206000906103af906103b4565b905090565b6000908152600160205260409020546001600160a01b031690565b6103d7610df2565b6000546001600160a01b03908116911614610427576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b6000610432836103b4565b90506001600160a01b0381166105dc5760603061044d6108f0565b604080516001600160a01b0393841660248201529190921660448083019190915282518083039091018152606490910182526020810180516001600160e01b031663485cc95560e01b17905290519091506000906104aa90610df6565b604051809103906000f0801580156104c6573d6000803e3d6000fd5b5090506104d38582610a2a565b6040516001600160a01b0382169086907f1eb35cb4b5bbb23d152f3b4016a5a46c37a07ae930ed0956aba951e23114243890600090a36040805163278f794360e11b81526001600160a01b03868116600483019081526024830193845285516044840152855191851693634f1ef2869389938893929160640190602085019080838360005b83811015610570578181015183820152602001610558565b50505050905090810190601f16801561059d5780820380516001836020036101000a031916815260200191505b509350505050600060405180830381600087803b1580156105bd57600080fd5b505af11580156105d1573d6000803e3d6000fd5b505050505050610641565b60408051631b2ce7f360e11b81526001600160a01b03848116600483015291518392831691633659cfe691602480830192600092919082900301818387803b15801561062757600080fd5b505af115801561063b573d6000803e3d6000fd5b50505050505b505050565b604080516921a7a72a2927a62622a960b11b8152905190819003600a0190206000906103af906103b4565b610679610df2565b6000546001600160a01b039081169116146106c9576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b60408051722624a8aaa4a220aa24a7a72fa6a0a720a3a2a960691b815290519081900360130190206106fb9082610a2a565b50565b610706610df2565b6000546001600160a01b03908116911614610756576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b604080516a13505491d25397d413d3d360aa1b8152905190819003600b0190206000906103af906103b4565b6107d4610df2565b6000546001600160a01b03908116911614610824576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b60408051654f5241434c4560d01b815290519081900360060190206106fb9082610a2a565b60408051654f5241434c4560d01b815290519081900360060190206000906103af906103b4565b610878610df2565b6000546001600160a01b039081169116146108c8576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516815d2125511531254d560ba1b815290519081900360090190206106fb9082610a2a565b6000546001600160a01b031690565b610907610df2565b6000546001600160a01b03908116911614610957576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516921a7a72a2927a62622a960b11b8152905190819003600a0190206106fb90826103cf565b604080516a13d513d2d15397d253541360aa1b8152905190819003600b0190206000906103af906103b4565b6109b4610df2565b6000546001600160a01b03908116911614610a04576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516a13d513d2d15397d253541360aa1b8152905190819003600b0190206106fb90825b610a32610df2565b6000546001600160a01b03908116911614610a82576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b60008281526001602052604080822080546001600160a01b0319166001600160a01b0385169081179091559051909184917f3eb532562a19423f49e2e3b30790b23d00c625f3ee37c7359d03688bf7111f6c9190a35050565b604080517026a0a923a4a72fa1a0a621aaa620aa27a960791b815290519081900360110190206000906103af906103b4565b604080516815d2125511531254d560ba1b815290519081900360090190206000906103af906103b4565b610b3f610df2565b6000546001600160a01b03908116911614610b8f576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516d4f544f4b454e5f464143544f525960901b8152905190819003600e0190206106fb9082610a2a565b610bc4610df2565b6000546001600160a01b03908116911614610c14576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516a13505491d25397d413d3d360aa1b8152905190819003600b0190206106fb9082610a2a565b610c46610df2565b6000546001600160a01b03908116911614610c96576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080517026a0a923a4a72fa1a0a621aaa620aa27a960791b815290519081900360110190206106fb9082610a2a565b60408051722624a8aaa4a220aa24a7a72fa6a0a720a3a2a960691b815290519081900360130190206000906103af906103b4565b610d02610df2565b6000546001600160a01b03908116911614610d52576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b6001600160a01b038116610d975760405162461bcd60e51b81526004018080602001828103825260268152602001806113056026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b3390565b61050180610e048339019056fe608060405234801561001057600080fd5b50610023336001600160e01b0361002816565b61005d565b604080517f6f72672e7a657070656c696e6f732e70726f78792e6f776e65720000000000008152905190819003601a01902055565b6104958061006c6000396000f3fe60806040526004361061004a5760003560e01c8063025313a21461008e5780633659cfe6146100bf5780634f1ef286146100f45780635c60da1b14610174578063f1739cae14610189575b60006100546101bc565b90506001600160a01b03811661006957600080fd5b60405136600082376000803683855af43d806000843e81801561008a578184f35b8184fd5b34801561009a57600080fd5b506100a36101df565b604080516001600160a01b039092168252519081900360200190f35b3480156100cb57600080fd5b506100f2600480360360208110156100e257600080fd5b50356001600160a01b0316610215565b005b6100f26004803603604081101561010a57600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561013557600080fd5b82018360208201111561014757600080fd5b8035906020019184600183028401116401000000008311171561016957600080fd5b509092509050610246565b34801561018057600080fd5b506100a36101bc565b34801561019557600080fd5b506100f2600480360360208110156101ac57600080fd5b50356001600160a01b03166102ed565b600080604051808061043d60239139604051908190036023019020549392505050565b604080517f6f72672e7a657070656c696e6f732e70726f78792e6f776e65720000000000008152905190819003601a0190205490565b61021d6101df565b6001600160a01b0316336001600160a01b03161461023a57600080fd5b61024381610379565b50565b61024e6101df565b6001600160a01b0316336001600160a01b03161461026b57600080fd5b61027483610215565b6000306001600160a01b0316348484604051808383808284376040519201945060009350909150508083038185875af1925050503d80600081146102d4576040519150601f19603f3d011682016040523d82523d6000602084013e6102d9565b606091505b50509050806102e757600080fd5b50505050565b6102f56101df565b6001600160a01b0316336001600160a01b03161461031257600080fd5b6001600160a01b03811661032557600080fd5b7f5a3e66efaa1e445ebd894728a69d6959842ea1e97bd79b892797106e270efcd961034e6101df565b604080516001600160a01b03928316815291841660208301528051918290030190a1610243816103e5565b60006103836101bc565b9050816001600160a01b0316816001600160a01b031614156103a457600080fd5b6103ad8261041a565b6040516001600160a01b038316907fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a25050565b604080517f6f72672e7a657070656c696e6f732e70726f78792e6f776e65720000000000008152905190819003601a01902055565b6000604051808061043d6023913960405190819003602301902092909255505056fe6f72672e7a657070656c696e6f732e70726f78792e696d706c656d656e746174696f6ea2646970667358221220864dc63a46ae009816b2e7a0f6056acbcb05db50e893bf1778217fd8f564115164736f6c634300060a00334f776e61626c653a206e6577206f776e657220697320746865207a65726f20616464726573734f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572a264697066735822122094e75adba5b805b1343abff880f524df07b6689b0d4ab896464970f383ec832f64736f6c634300060a0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101425760003560e01c806392eefe9b116100b8578063d01f63f51161007c578063d01f63f5146102d8578063d94f323e146102e0578063e7cf784114610306578063e9f2e8be1461032c578063ee8a463214610352578063f2fde38b1461035a57610142565b806392eefe9b14610250578063a8de41d514610276578063b508ac991461027e578063ca446dd9146102a4578063cf28493f146102d057610142565b8063715018a61161010a578063715018a6146101e457806375486342146101ec5780637adbf973146101f4578063833b1fce1461021a578063854cff2f146102225780638da5cb5b1461024857610142565b80631ffaf0db1461014757806321f8a7211461016b5780632b6bfeaa146101885780633018205f146101b657806338f92fc7146101be575b600080fd5b61014f610380565b604080516001600160a01b039092168252519081900360200190f35b61014f6004803603602081101561018157600080fd5b50356103b4565b6101b46004803603604081101561019e57600080fd5b50803590602001356001600160a01b03166103cf565b005b61014f610646565b6101b4600480360360208110156101d457600080fd5b50356001600160a01b0316610671565b6101b46106fe565b61014f6107a0565b6101b46004803603602081101561020a57600080fd5b50356001600160a01b03166107cc565b61014f610849565b6101b46004803603602081101561023857600080fd5b50356001600160a01b0316610870565b61014f6108f0565b6101b46004803603602081101561026657600080fd5b50356001600160a01b03166108ff565b61014f610980565b6101b46004803603602081101561029457600080fd5b50356001600160a01b03166109ac565b6101b4600480360360408110156102ba57600080fd5b50803590602001356001600160a01b0316610a2a565b61014f610adb565b61014f610b0d565b6101b4600480360360208110156102f657600080fd5b50356001600160a01b0316610b37565b6101b46004803603602081101561031c57600080fd5b50356001600160a01b0316610bbc565b6101b46004803603602081101561034257600080fd5b50356001600160a01b0316610c3e565b61014f610cc6565b6101b46004803603602081101561037057600080fd5b50356001600160a01b0316610cfa565b604080516d4f544f4b454e5f464143544f525960901b8152905190819003600e0190206000906103af906103b4565b905090565b6000908152600160205260409020546001600160a01b031690565b6103d7610df2565b6000546001600160a01b03908116911614610427576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b6000610432836103b4565b90506001600160a01b0381166105dc5760603061044d6108f0565b604080516001600160a01b0393841660248201529190921660448083019190915282518083039091018152606490910182526020810180516001600160e01b031663485cc95560e01b17905290519091506000906104aa90610df6565b604051809103906000f0801580156104c6573d6000803e3d6000fd5b5090506104d38582610a2a565b6040516001600160a01b0382169086907f1eb35cb4b5bbb23d152f3b4016a5a46c37a07ae930ed0956aba951e23114243890600090a36040805163278f794360e11b81526001600160a01b03868116600483019081526024830193845285516044840152855191851693634f1ef2869389938893929160640190602085019080838360005b83811015610570578181015183820152602001610558565b50505050905090810190601f16801561059d5780820380516001836020036101000a031916815260200191505b509350505050600060405180830381600087803b1580156105bd57600080fd5b505af11580156105d1573d6000803e3d6000fd5b505050505050610641565b60408051631b2ce7f360e11b81526001600160a01b03848116600483015291518392831691633659cfe691602480830192600092919082900301818387803b15801561062757600080fd5b505af115801561063b573d6000803e3d6000fd5b50505050505b505050565b604080516921a7a72a2927a62622a960b11b8152905190819003600a0190206000906103af906103b4565b610679610df2565b6000546001600160a01b039081169116146106c9576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b60408051722624a8aaa4a220aa24a7a72fa6a0a720a3a2a960691b815290519081900360130190206106fb9082610a2a565b50565b610706610df2565b6000546001600160a01b03908116911614610756576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b604080516a13505491d25397d413d3d360aa1b8152905190819003600b0190206000906103af906103b4565b6107d4610df2565b6000546001600160a01b03908116911614610824576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b60408051654f5241434c4560d01b815290519081900360060190206106fb9082610a2a565b60408051654f5241434c4560d01b815290519081900360060190206000906103af906103b4565b610878610df2565b6000546001600160a01b039081169116146108c8576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516815d2125511531254d560ba1b815290519081900360090190206106fb9082610a2a565b6000546001600160a01b031690565b610907610df2565b6000546001600160a01b03908116911614610957576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516921a7a72a2927a62622a960b11b8152905190819003600a0190206106fb90826103cf565b604080516a13d513d2d15397d253541360aa1b8152905190819003600b0190206000906103af906103b4565b6109b4610df2565b6000546001600160a01b03908116911614610a04576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516a13d513d2d15397d253541360aa1b8152905190819003600b0190206106fb90825b610a32610df2565b6000546001600160a01b03908116911614610a82576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b60008281526001602052604080822080546001600160a01b0319166001600160a01b0385169081179091559051909184917f3eb532562a19423f49e2e3b30790b23d00c625f3ee37c7359d03688bf7111f6c9190a35050565b604080517026a0a923a4a72fa1a0a621aaa620aa27a960791b815290519081900360110190206000906103af906103b4565b604080516815d2125511531254d560ba1b815290519081900360090190206000906103af906103b4565b610b3f610df2565b6000546001600160a01b03908116911614610b8f576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516d4f544f4b454e5f464143544f525960901b8152905190819003600e0190206106fb9082610a2a565b610bc4610df2565b6000546001600160a01b03908116911614610c14576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080516a13505491d25397d413d3d360aa1b8152905190819003600b0190206106fb9082610a2a565b610c46610df2565b6000546001600160a01b03908116911614610c96576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b604080517026a0a923a4a72fa1a0a621aaa620aa27a960791b815290519081900360110190206106fb9082610a2a565b60408051722624a8aaa4a220aa24a7a72fa6a0a720a3a2a960691b815290519081900360130190206000906103af906103b4565b610d02610df2565b6000546001600160a01b03908116911614610d52576040805162461bcd60e51b8152602060048201819052602482015260008051602061132b833981519152604482015290519081900360640190fd5b6001600160a01b038116610d975760405162461bcd60e51b81526004018080602001828103825260268152602001806113056026913960400191505060405180910390fd5b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b3390565b61050180610e048339019056fe608060405234801561001057600080fd5b50610023336001600160e01b0361002816565b61005d565b604080517f6f72672e7a657070656c696e6f732e70726f78792e6f776e65720000000000008152905190819003601a01902055565b6104958061006c6000396000f3fe60806040526004361061004a5760003560e01c8063025313a21461008e5780633659cfe6146100bf5780634f1ef286146100f45780635c60da1b14610174578063f1739cae14610189575b60006100546101bc565b90506001600160a01b03811661006957600080fd5b60405136600082376000803683855af43d806000843e81801561008a578184f35b8184fd5b34801561009a57600080fd5b506100a36101df565b604080516001600160a01b039092168252519081900360200190f35b3480156100cb57600080fd5b506100f2600480360360208110156100e257600080fd5b50356001600160a01b0316610215565b005b6100f26004803603604081101561010a57600080fd5b6001600160a01b03823516919081019060408101602082013564010000000081111561013557600080fd5b82018360208201111561014757600080fd5b8035906020019184600183028401116401000000008311171561016957600080fd5b509092509050610246565b34801561018057600080fd5b506100a36101bc565b34801561019557600080fd5b506100f2600480360360208110156101ac57600080fd5b50356001600160a01b03166102ed565b600080604051808061043d60239139604051908190036023019020549392505050565b604080517f6f72672e7a657070656c696e6f732e70726f78792e6f776e65720000000000008152905190819003601a0190205490565b61021d6101df565b6001600160a01b0316336001600160a01b03161461023a57600080fd5b61024381610379565b50565b61024e6101df565b6001600160a01b0316336001600160a01b03161461026b57600080fd5b61027483610215565b6000306001600160a01b0316348484604051808383808284376040519201945060009350909150508083038185875af1925050503d80600081146102d4576040519150601f19603f3d011682016040523d82523d6000602084013e6102d9565b606091505b50509050806102e757600080fd5b50505050565b6102f56101df565b6001600160a01b0316336001600160a01b03161461031257600080fd5b6001600160a01b03811661032557600080fd5b7f5a3e66efaa1e445ebd894728a69d6959842ea1e97bd79b892797106e270efcd961034e6101df565b604080516001600160a01b03928316815291841660208301528051918290030190a1610243816103e5565b60006103836101bc565b9050816001600160a01b0316816001600160a01b031614156103a457600080fd5b6103ad8261041a565b6040516001600160a01b038316907fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a25050565b604080517f6f72672e7a657070656c696e6f732e70726f78792e6f776e65720000000000008152905190819003601a01902055565b6000604051808061043d6023913960405190819003602301902092909255505056fe6f72672e7a657070656c696e6f732e70726f78792e696d706c656d656e746174696f6ea2646970667358221220864dc63a46ae009816b2e7a0f6056acbcb05db50e893bf1778217fd8f564115164736f6c634300060a00334f776e61626c653a206e6577206f776e657220697320746865207a65726f20616464726573734f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572a264697066735822122094e75adba5b805b1343abff880f524df07b6689b0d4ab896464970f383ec832f64736f6c634300060a0033",
+  "devdoc": {
+    "author": "Opyn Team",
+    "methods": {
+      "getAddress(bytes32)": {
+        "params": {
+          "_key": "key address"
+        },
+        "returns": {
+          "_0": "address"
+        }
+      },
+      "getController()": {
+        "returns": {
+          "_0": "Controller address"
+        }
+      },
+      "getLiquidationManager()": {
+        "returns": {
+          "_0": "LiquidationManager address"
+        }
+      },
+      "getMarginCalculator()": {
+        "returns": {
+          "_0": "MarginCalculator address"
+        }
+      },
+      "getMarginPool()": {
+        "returns": {
+          "_0": "MarginPool address"
+        }
+      },
+      "getOracle()": {
+        "returns": {
+          "_0": "Oracle address"
+        }
+      },
+      "getOtokenFactory()": {
+        "returns": {
+          "_0": "OtokenFactory address"
+        }
+      },
+      "getOtokenImpl()": {
+        "returns": {
+          "_0": "Otoken implementation address"
+        }
+      },
+      "getWhitelist()": {
+        "returns": {
+          "_0": "Whitelist address"
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "setAddress(bytes32,address)": {
+        "details": "can only be called by the addressbook owner",
+        "params": {
+          "_address": "address",
+          "_key": "key"
+        }
+      },
+      "setController(address)": {
+        "details": "can only be called by the addressbook owner",
+        "params": {
+          "_controller": "Controller address"
+        }
+      },
+      "setLiquidationManager(address)": {
+        "details": "can only be called by the addressbook owner",
+        "params": {
+          "_liquidationManager": "LiquidationManager address"
+        }
+      },
+      "setMarginCalculator(address)": {
+        "details": "can only be called by the addressbook owner",
+        "params": {
+          "_marginCalculator": "MarginCalculator address"
+        }
+      },
+      "setMarginPool(address)": {
+        "details": "can only be called by the addressbook owner",
+        "params": {
+          "_marginPool": "MarginPool address"
+        }
+      },
+      "setOracle(address)": {
+        "details": "can only be called by the addressbook owner",
+        "params": {
+          "_oracle": "Oracle address"
+        }
+      },
+      "setOtokenFactory(address)": {
+        "details": "can only be called by the addressbook owner",
+        "params": {
+          "_otokenFactory": "OtokenFactory address"
+        }
+      },
+      "setOtokenImpl(address)": {
+        "details": "can only be called by the addressbook owner",
+        "params": {
+          "_otokenImpl": "Otoken implementation address"
+        }
+      },
+      "setWhitelist(address)": {
+        "details": "can only be called by the addressbook owner",
+        "params": {
+          "_whitelist": "Whitelist address"
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      },
+      "updateImpl(bytes32,address)": {
+        "details": "function to update the implementation of a specific component of the protocol",
+        "params": {
+          "_id": "id of the contract to be updated",
+          "_newAddress": "address of the new implementation*"
+        }
+      }
+    },
+    "stateVariables": {
+      "CONTROLLER": {
+        "details": "Controller key"
+      },
+      "LIQUIDATION_MANAGER": {
+        "details": "LiquidationManager key"
+      },
+      "MARGIN_CALCULATOR": {
+        "details": "MarginCalculator key"
+      },
+      "MARGIN_POOL": {
+        "details": "MarginPool key"
+      },
+      "ORACLE": {
+        "details": "Oracle key"
+      },
+      "OTOKEN_FACTORY": {
+        "details": "OtokenFactory key"
+      },
+      "OTOKEN_IMPL": {
+        "details": "Otoken implementation key"
+      },
+      "WHITELIST": {
+        "details": "Whitelist key"
+      },
+      "addresses": {
+        "details": "mapping between key and address"
+      }
+    },
+    "title": "AddressBook Module"
+  },
+  "userdoc": {
+    "methods": {
+      "getAddress(bytes32)": {
+        "notice": "return an address for specific key"
+      },
+      "getController()": {
+        "notice": "return Controller address"
+      },
+      "getLiquidationManager()": {
+        "notice": "return LiquidationManager address"
+      },
+      "getMarginCalculator()": {
+        "notice": "return MarginCalculator address"
+      },
+      "getMarginPool()": {
+        "notice": "return MarginPool address"
+      },
+      "getOracle()": {
+        "notice": "return Oracle address"
+      },
+      "getOtokenFactory()": {
+        "notice": "return oTokenFactory address"
+      },
+      "getOtokenImpl()": {
+        "notice": "return Otoken implementation address"
+      },
+      "getWhitelist()": {
+        "notice": "return Whitelist address"
+      },
+      "setAddress(bytes32,address)": {
+        "notice": "set a specific address for a specific key"
+      },
+      "setController(address)": {
+        "notice": "set Controller address"
+      },
+      "setLiquidationManager(address)": {
+        "notice": "set LiquidationManager address"
+      },
+      "setMarginCalculator(address)": {
+        "notice": "set MarginCalculator address"
+      },
+      "setMarginPool(address)": {
+        "notice": "set MarginPool address"
+      },
+      "setOracle(address)": {
+        "notice": "set Oracle address"
+      },
+      "setOtokenFactory(address)": {
+        "notice": "set OtokenFactory address"
+      },
+      "setOtokenImpl(address)": {
+        "notice": "set Otoken implementation address"
+      },
+      "setWhitelist(address)": {
+        "notice": "set Whitelist address"
+      }
+    }
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 13735,
+        "contract": "contracts/core/AddressBook.sol:AddressBook",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 61,
+        "contract": "contracts/core/AddressBook.sol:AddressBook",
+        "label": "addresses",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_bytes32,t_address)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_bytes32,t_address)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      }
+    }
+  }
+}

@@ -23,6 +23,7 @@ const config: HardhatUserConfig = {
       kovan: process.env.ETHERSCAN_API_KEY,
       polygon: process.env.POLYGONSCAN_API_KEY,
       polygonMumbai: process.env.POLYGONSCAN_API_KEY,
+      avalanche: process.env.AVALANHE_API_KEY,
     },
   },
   gasReporter: {
@@ -50,8 +51,11 @@ const config: HardhatUserConfig = {
     hardhat: {
       forking: {
         enabled: process.env.FORKING === "true",
-        url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+        // url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+        url: "https://api.avax.network/ext/bc/C/rpc",
+        blockNumber: 12042353,
       },
+      chainId: 43114,
       live: false,
       saveDeployments: true,
       tags: ["test", "local"],
