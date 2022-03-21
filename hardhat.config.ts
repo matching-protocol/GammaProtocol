@@ -1,5 +1,6 @@
 import "dotenv/config";
 import "@nomiclabs/hardhat-ethers";
+import "@nomiclabs/hardhat-web3";
 import "@nomiclabs/hardhat-etherscan";
 import "hardhat-deploy";
 import "hardhat-gas-reporter";
@@ -107,6 +108,14 @@ const config: HardhatUserConfig = {
       live: true,
       saveDeployments: true,
       gasMultiplier: 2,
+    },
+    avalanche: {
+      url: "https://api.avax.network/ext/bc/C/rpc",
+      accounts,
+      chainId: 43114,
+      live: true,
+      saveDeployments: true,
+      allowUnlimitedContractSize: true,
     },
   },
   solidity: {

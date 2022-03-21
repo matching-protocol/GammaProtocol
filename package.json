@@ -27,7 +27,10 @@
     "hardhat:deploy": "hardhat --network hardhat deploy",
     "kovan:deploy": "hardhat --network kovan deploy",
     "kovan:verify": "hardhat --network kovan etherscan-verify --license MIT --force-license",
-    "kovan:export": "hardhat --network kovan export --export exports/kovan.json"
+    "kovan:export": "hardhat --network kovan export --export exports/kovan.json",
+    "avalanche:deploy": "hardhat --network avalanche deploy",
+    "avalanche:export": "hardhat --network avalanche export --export exports/avalanche.json",
+    "avalanche:verify": "hardhat --network avalanche etherscan-verify --license MIT --force-license"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",

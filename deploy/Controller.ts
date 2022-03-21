@@ -5,6 +5,7 @@ const deployFunction: DeployFunction = async function ({
    deployments,
    getNamedAccounts,
    ethers,
+   web3,
 }: HardhatRuntimeEnvironment) {
     console.log("Running Controller deploy script");
     const {deploy} = deployments;
@@ -81,9 +82,9 @@ const deployFunction: DeployFunction = async function ({
 
     console.log("AddressBook setController");
     await (
-        await addressBookContract.setController(
-            (await deployments.get("Controller")).address,
-        )
+        await addressBookContract.setAddress(
+            web3.utils.keccak256("CONTROLLER"),
+            (await deployments.get("Controller")).address)
     ).wait();
 
     console.log("Deployment done");
